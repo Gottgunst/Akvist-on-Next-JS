@@ -1,0 +1,11 @@
+.section__title_type_article {
+  font-size: var(--font-size__h3);
+  line-height: var(--line-height__h3);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

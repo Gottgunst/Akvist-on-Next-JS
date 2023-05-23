@@ -1,0 +1,10 @@
+.direction__brand {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.direction_column .direction__brand {
+  height: 56px;
+}

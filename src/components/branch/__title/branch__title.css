@@ -1,0 +1,5 @@
+.branch__title {
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__h4);
+  line-height: var(--line-height__h4);
+}

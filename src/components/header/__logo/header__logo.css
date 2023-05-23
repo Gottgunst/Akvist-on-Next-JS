@@ -1,0 +1,27 @@
+.header__logo {
+  width: 137px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color__bg_white);
+  border-radius: 0 0 var(--border-radius__main) var(--border-radius__main);
+  box-sizing: border-box;
+  padding: 6px 14px 0;
+}
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .header__logo {
+
+  }
+} */
+
+@media screen and (max-width: 791px) {
+  .header__logo {
+    width: 98px;
+    height: 73px;
+    padding: 4px 10px 0;
+  }
+}

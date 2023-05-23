@@ -1,0 +1,16 @@
+.header__popup-link {
+  display: inline-block;
+  line-height: 32px;
+  width: 327px;
+  opacity: 1;
+  padding: 0 30px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header__popup-link:hover {
+  background-color: #5da460;
+  opacity: 1;
+}

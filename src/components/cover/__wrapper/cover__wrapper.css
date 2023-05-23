@@ -1,0 +1,24 @@
+.cover__wrapper {
+  display: flex;
+  max-width: 940px;
+  height: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: end;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .cover__wrapper {
+    /* min-width: 620px; */
+    padding: 0 var(--padding__section);
+    box-sizing: content-box;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .cover__wrapper {
+    /* min-width: 300px; */
+  }
+}

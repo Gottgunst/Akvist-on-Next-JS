@@ -1,0 +1,19 @@
+/* .site-map__block {
+
+} */
+
+.site-map__block[aria-label='Блок 1']{
+  grid-area: directions;
+}
+
+.site-map__block[aria-label='Блок 2']{
+  grid-area: materials;
+}
+
+.site-map__block[aria-label='Блок 3']{
+  grid-area: branches;
+}
+
+.site-map__block[aria-label='Блок 4']{
+  grid-area: about;
+}

@@ -1,0 +1,33 @@
+.header__popup {
+  position: absolute;
+  z-index: 20;
+  width: 654px;
+  padding: 20px 30px;
+  top: 45px;
+  left: 18px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .3s, opacity .3s linear;
+}
+
+.header__popup:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-open:hover + .header__popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* .header__popup::before {
+  content: '';
+  position: absolute;
+  background-color: var(--color__accent_green);
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 55px;
+  transform: rotate(45deg);
+} */

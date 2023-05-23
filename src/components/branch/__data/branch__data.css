@@ -1,0 +1,22 @@
+.branch__data {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px 60px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .branch__data {
+
+  }
+} */
+
+@media screen and (max-width: 791px) {
+  .branch__data {
+    padding: 36px 36px 50px;
+  }
+}

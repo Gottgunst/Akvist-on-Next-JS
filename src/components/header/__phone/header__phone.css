@@ -1,0 +1,10 @@
+.header__phone {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__p);
+  line-height: var(--line-height__p);
+  font-weight: var(--font-weight__medium);
+  color: inherit;
+}

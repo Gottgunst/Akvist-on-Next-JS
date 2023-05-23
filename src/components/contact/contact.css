@@ -1,0 +1,34 @@
+.contact {
+  font-size: var(--font-size__p);
+  line-height: var(--line-height__p);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .contact {
+
+  }
+} */
+
+@media screen and (max-width: 791px) {
+  .contact {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-top: 1px solid var(--color__border_white); */
+  }
+
+  .contact:before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    margin-bottom: 44px;
+    background-image: var(--color__border_gradient);
+  }
+
+}

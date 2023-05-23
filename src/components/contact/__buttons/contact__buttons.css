@@ -1,0 +1,11 @@
+.contact__buttons {
+  display: none;
+}
+
+@media screen and (max-width: 791px) {
+  .contact__buttons {
+    display: flex;
+    padding: 32px 0 0 0;
+    gap: 12px;
+  }
+}

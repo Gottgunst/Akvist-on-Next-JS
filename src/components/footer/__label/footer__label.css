@@ -1,0 +1,13 @@
+.footer__label {
+  padding-top: 24px;
+  min-width: 220px;
+}
+
+.footer__label::before {
+  height: 20px;
+  color: var(--color__text_p-small);
+  font-size: var(--font-size__p-small);
+  line-height: var(--line-height__p-small);
+  font-family: var(--font-family__p);
+  font-weight: var(--font-weight__regular);
+}

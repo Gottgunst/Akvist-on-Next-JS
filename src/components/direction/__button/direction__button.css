@@ -1,0 +1,5 @@
+@media screen and (max-width: 791px) {
+  .direction__button {
+    display: none;
+  }
+}

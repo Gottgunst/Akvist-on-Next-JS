@@ -1,0 +1,5 @@
+.contact__name {
+  padding-bottom: 8px;
+  font-family: var(--font-family__h);
+  font-weight: var(--font-weight__bold);
+}

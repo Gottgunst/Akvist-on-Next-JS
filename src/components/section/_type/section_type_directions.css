@@ -1,0 +1,25 @@
+.section_type_directions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
+  margin: 0 auto 128px;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .section_type_directions {
+    padding: 0;
+    gap: 104px;
+    margin: 0 0 104px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .section_type_directions {
+    gap: 56px;
+    margin: 0 0 56px;
+    padding: 0 var(--padding__section);
+  }
+}

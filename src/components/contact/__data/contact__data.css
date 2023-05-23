@@ -1,0 +1,4 @@
+.contact__data {
+  flex-shrink: 0;
+  flex-grow: 1;
+}

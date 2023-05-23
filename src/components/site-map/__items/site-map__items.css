@@ -1,0 +1,5 @@
+.site-map__items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

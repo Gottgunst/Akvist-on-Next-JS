@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__h1);
+
+  color: var(--color__text_invert);
+  background-color: rgba(0, 0, 0, .8);
+}

@@ -1,0 +1,5 @@
+.law-data__link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: .5px;
+}

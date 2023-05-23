@@ -1,0 +1,20 @@
+.grid_type_service {
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 53px 0 189px;
+}
+
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .grid_type_service {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .grid_type_service {
+    grid-template-columns: repeat(1, minmax(300px, 440px));
+  }
+}

@@ -1,0 +1,8 @@
+.site-map__title {
+  font-family: var(--font-family__p);
+  font-size: var(--font-size__p-small);
+  line-height: var(--line-height__p-small);
+  font-weight: var(--font-weight__regular);
+  color: var(--color__text_p-small);
+  padding-bottom: 16px;
+}

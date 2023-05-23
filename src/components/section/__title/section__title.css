@@ -1,0 +1,6 @@
+.section__title {
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__h2);
+  line-height: var(--line-height__h2);
+  font-weight: var(--font-weight__bold);
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../vendor/fonts/golos-text_demibold.woff2') format('woff2'),
+    url('../vendor/fonts/golos-text_demibold.woff') format('woff'),
+    url('../vendor/fonts/Golos-Text_DemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../vendor/fonts/golos-text_medium.woff2') format('woff2'),
+    url('../vendor/fonts/golos-text_medium.woff') format('woff'),
+    url('../vendor/fonts/Golos-Text_Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../vendor/fonts/Arimo-Regular.woff2') format('woff2'),
+    url('../vendor/fonts/Arimo-Regular.woff') format('woff'),
+    url('../vendor/fonts/Arimo-Regular.ttf') format('truetype');
+}

@@ -1,0 +1,142 @@
+/* ######################################################################### */
+/* ######################### SETUP PAGE STYLES ############################# */
+/* ######################################################################### */
+
+@import url('../vendor/normalize.css');
+/* @import url('../vendor/font.css'); */
+
+@import url('./zero.css');
+@import url('./root.css');
+
+/* ######################################################################### */
+/* ######################### MAIN LAYOUT STYLES ############################ */
+/* ######################################################################### */
+
+@import url('../components/page/page.css');
+
+@import url('../components/overlay/overlay.css');
+
+@import url('../components/logo/logo.css');
+
+@import url('../components/link/link.css');
+
+
+@import url('../components/header/header.css');
+@import url('../components/header/_inverted/header_inverted.css');
+
+@import url('../components/header/__wrapper/header__wrapper.css');
+@import url('../components/header/__logo/header__logo.css');
+@import url('../components/header/__nav/header__nav.css');
+@import url('../components/header/__menu/header__menu.css');
+@import url('../components/header/__link/header__link.css');
+@import url('../components/header/__contact/header__contact.css');
+@import url('../components/header/__phone/header__phone.css');
+@import url('../components/header/__select/header__select.css');
+@import url('../components/header/__city/header__city.css');
+@import url('../components/header/__menu-button/header__menu-button.css');
+
+@import url('../components/header/__popup/header__popup.css');
+@import url('../components/header/__popup-menu/header__popup-menu.css');
+@import url('../components/header/__popup-link/header__popup-link.css');
+
+@import url('../components/header-compensation/header-compensation.css');
+
+@import url('../components/cover/cover.css');
+@import url('../components/cover/__wrapper/cover__wrapper.css');
+@import url('../components/cover/__motto/cover__motto.css');
+
+@import url('../components/welcome/welcome.css');
+@import url('../components/quote/quote.css');
+
+
+
+@import url('../components/section/section.css');
+@import url('../components/section/_type/section_type_directions.css');
+@import url('../components/section/_type/section_type_two-columns.css');
+@import url('../components/section/_type/section_type_brands-grid.css');
+@import url('../components/section/_type/section_type_contacts.css');
+@import url('../components/section/_type/section_type_footer.css');
+
+@import url('../components/section/_background/section_background_grey.css');
+
+@import url('../components/section/__title/section__title.css');
+@import url('../components/section/__title/_type/section__title_type_article.css');
+@import url('../components/section/__text/section__text.css');
+
+
+@import url('../components/button/button.css');
+
+@import url('../components/grid/grid.css');
+
+
+@import url('../components/contacts/contacts.css');
+@import url('../components/contacts/__grid/contacts__grid.css');
+
+@import url('../components/contact/contact.css');
+@import url('../components/contact/__title/contact__title.css');
+@import url('../components/contact/__data/contact__data.css');
+@import url('../components/contact/__name/contact__name.css');
+@import url('../components/contact/__link/contact__link.css');
+@import url('../components/contact/__buttons/contact__buttons.css');
+@import url('../components/contact/__button/contact__button.css');
+
+@import url('../components/branch/branch.css');
+@import url('../components/branch/__data/branch__data.css');
+@import url('../components/branch/__title/branch__title.css');
+@import url('../components/branch/__label/branch__label.css');
+@import url('../components/branch/__map/branch__map.css');
+@import url('../components/branch/__iframe/branch__iframe.css');
+
+@import url('../components/footer/footer.css');
+@import url('../components/footer/__branch/footer__branch.css');
+@import url('../components/footer/__label/footer__label.css');
+@import url('../components/footer/__phone/footer__phone.css');
+
+@import url('../components/site-map/site-map.css');
+@import url('../components/site-map/__block/site-map__block.css');
+@import url('../components/site-map/__title/site-map__title.css');
+@import url('../components/site-map/__items/site-map__items.css');
+@import url('../components/site-map/__link/site-map__link.css');
+
+@import url('../components/law-data/law-data.css');
+@import url('../components/law-data/__logo/law-data__logo.css');
+@import url('../components/law-data/__copyright/law-data__copyright.css');
+@import url('../components/law-data/__politics/law-data__politics.css');
+@import url('../components/law-data/__link/law-data__link.css');
+
+
+/* ######################################################################### */
+/* ####################### DIRECTIONS PAGE STYLES ########################## */
+/* ######################################################################### */
+
+
+@import url('../components/direction/direction.css');
+@import url('../components/direction/_column/direction_column.css');
+@import url('../components/direction/__images/direction__images.css');
+@import url('../components/direction/__link/direction__link.css');
+@import url('../components/direction/__img/direction__img.css');
+@import url('../components/direction/__brands/direction__brands.css');
+@import url('../components/direction/__brands-name/direction__brands-name.css');
+@import url('../components/direction/__brand/direction__brand.css');
+@import url('../components/direction/__texts/direction__texts.css');
+/* @import url('../components/direction/__header/direction__header.css'); */
+@import url('../components/direction/__description/direction__description.css');
+@import url('../components/direction/__button/direction__button.css');
+
+
+/* ######################################################################### */
+/* ######################### ABOUT PAGE STYLES ############################# */
+/* ######################################################################### */
+
+@import url('../components/section/_type/section_type_numbers.css');
+
+@import url('../components/grid/_type/grid_type_service.css');
+@import url('../components/grid/_type/grid_type_numbers.css');
+
+/* @import url('../components/numbers/numbers.css'); */
+@import url('../components/numbers/__digit/numbers__digit.css');
+@import url('../components/numbers/__caption/numbers__caption.css');
+
+
+@import url('../components/service/__icon/service__icon.css');
+@import url('../components/service/__title/service__title.css');

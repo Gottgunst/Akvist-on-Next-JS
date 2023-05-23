@@ -1,0 +1,29 @@
+.numbers__digit {
+  font-size: var(--font-size__h1);
+  line-height: var(--line-height__h1);
+  color: var(--color__accent_green);
+  white-space: nowrap;
+  position: relative;
+}
+
+.numbers__digit[data-above='more']::before {
+  content: "более";
+  font-size: var(--font-size__p);
+  line-height: var(--line-height__p);
+  font-weight: var(--font-weight__regular);
+  font-family: var(--font-family__p);
+  color: var(--color__accent_green);
+  position: absolute;
+  top: -20px;
+}
+
+.numbers__digit[data-above='less']::before {
+  content: "менее";
+  font-size: var(--font-size__p);
+  line-height: var(--line-height__p);
+  font-weight: var(--font-weight__regular);
+  font-family: var(--font-family__p);
+  color: var(--color__accent_green);
+  position: absolute;
+  top: -20px;
+}

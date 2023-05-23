@@ -1,0 +1,19 @@
+.section_background_grey{
+  max-width: 100%;
+  background-color: var(--color__bg_grey);
+  margin: 120px 0 75px;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .section_background_grey {
+    margin: 37px 0 60px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .section_background_grey {
+    margin: 32px 0 18px;
+  }
+}

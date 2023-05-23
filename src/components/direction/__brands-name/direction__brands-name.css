@@ -1,0 +1,32 @@
+.direction__brands-name {
+  display: none;
+  padding-top: 8px;
+  color: var(--color__text_p-small);
+  font-size: var(--font-size__p-small);
+  line-height: var(--line-height__p-small);
+  gap: 5px;
+}
+
+.direction__brands-name li::after {
+  content: '/';
+  padding-left: 5px;
+}
+
+.direction__brands-name li:last-child:after {
+  content: '';
+  padding-left: 0;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .direction__brands-name {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .direction__brands-name {
+    padding-top: clamp(4px,.5vw,8px);
+  }
+}

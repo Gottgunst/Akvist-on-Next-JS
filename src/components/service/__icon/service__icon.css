@@ -1,0 +1,33 @@
+.service__icon {
+  width: 247px;
+  height: 143px;
+  background-position: left;
+  background-size: contain;
+  margin-bottom: 7px;
+}
+
+
+.service__icon[data-type="certificate"]{
+  background-image: url('../../../../public/images/svg/Service-Certificate.svg');
+}
+.service__icon[data-type="delivery"]{
+  background-image: url('../../../../public/images/svg/Service-Delivery.svg');
+}
+.service__icon[data-type="example"]{
+  background-image: url('../../../../public/images/svg/Service-Example.svg');
+}
+.service__icon[data-type="materials"]{
+  background-image: url('../../../../public/images/svg/Service-Materials.svg');
+}
+.service__icon[data-type="portfolio"]{
+  background-image: url('../../../../public/images/svg/Service-Portfolio.svg');
+}
+.service__icon[data-type="support"]{
+  background-image: url('../../../../public/images/svg/Service-Support.svg');
+}
+.service__icon[data-type="tablet"]{
+  background-image: url('../../../../public/images/svg/Service-Tablet.svg');
+}
+.service__icon[data-type="route"]{
+  background-image: url('../../../../public/images/svg/Service-Route.svg');
+}

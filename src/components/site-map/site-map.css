@@ -1,0 +1,32 @@
+.site-map {
+  display: grid;
+  grid-template-columns: 380px 300px 220px;
+  grid-template-areas:
+  'directions materials branches'
+  'directions materials about';
+  gap: 40px 20px;
+  justify-content: start;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .site-map {
+    grid-template-columns: 1fr 220px;
+    grid-template-areas:
+    'directions branches'
+    'directions about'
+    'materials about';
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .site-map {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'branches'
+    'about'
+    'directions'
+    'materials';
+  }
+}

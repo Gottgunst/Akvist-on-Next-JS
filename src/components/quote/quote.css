@@ -1,0 +1,41 @@
+.quote {
+  margin: 100px auto;
+  padding: 0 160px 0 50px;
+  position: relative;
+  box-sizing: content-box;
+
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__quote);
+  line-height: var(--line-height__quote);
+  font-weight: var(--font-weight__medium);
+}
+
+.quote::before {
+  content: '“';
+  display: block;
+  position: absolute;
+  left: -7px;
+  top: 34px;
+  color: var(--color__accent_green);
+  font-size: 81px;
+  line-height: 0;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .quote {
+    padding: 0 0 0 50px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .quote {
+    padding: 0;
+  }
+
+  .quote::before {
+    left: -7px;
+    top: -10px;
+  }
+}

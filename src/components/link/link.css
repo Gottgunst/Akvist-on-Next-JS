@@ -1,0 +1,22 @@
+.link {
+  color: inherit;
+  opacity: 1;
+  transition: var(--transition__link);
+}
+
+.link:hover {
+  opacity: .6;
+}
+
+/* .link:visited {
+  color: inherit;
+} */
+
+.active {
+  opacity: .4;
+  cursor: default;
+}
+
+.active:hover {
+  opacity: .4;
+}

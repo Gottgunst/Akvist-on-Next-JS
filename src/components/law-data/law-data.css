@@ -1,0 +1,29 @@
+.law-data {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  color: var(--color__text_p-small);
+  font-size: var(--font-size__p-small);
+  line-height: var(--line-height__p-small);
+  font-family: var(--font-family__p);
+
+  padding-top: 45px;
+  border-top: 1px solid var(--color__border_grey);
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .law-data {
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .law-data {
+    padding-top: 50px;
+  }
+}

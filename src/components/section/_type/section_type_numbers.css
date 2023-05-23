@@ -1,0 +1,8 @@
+.section_type_numbers {
+  padding: 50px 80px 40px;
+  box-sizing: border-box;
+  border-top: 1.5px solid;
+  border-bottom: 1.5px solid;
+  border-color: var(--color__accent_green);
+  margin-bottom: 50px;
+}

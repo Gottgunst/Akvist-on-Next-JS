@@ -1,0 +1,27 @@
+.branch__label {
+  position: relative;
+  padding-top: 16px;
+}
+
+.branch__label::before {
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color__text_p-tiny);
+  font-size: var(--font-size__p-tiny);
+  line-height: var(--line-height__p-tyny);
+}
+
+
+.branch__label[aria-label='Расписание']::before {
+  content: 'График работы';
+}
+
+.branch__label[aria-label='Телефон']::before {
+  content: 'Номер телефона';
+}
+
+.branch__label[aria-label='Местонахождение']::before {
+  content: 'Адрес офиса';
+}

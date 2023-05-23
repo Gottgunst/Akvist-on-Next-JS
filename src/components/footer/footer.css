@@ -1,0 +1,20 @@
+.footer {
+  width: 100%;
+  min-height: 200px;
+  background-color: var(--color__bg_grey);
+  padding: 73px 0 80px;
+}
+
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .footer {
+  }
+} */
+
+@media screen and (max-width: 791px) {
+  .footer {
+    padding: 60px 0 50px;
+  }
+}

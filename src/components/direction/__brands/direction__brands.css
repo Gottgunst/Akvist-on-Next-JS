@@ -1,0 +1,32 @@
+.direction__brands {
+  display: flex;
+  width: auto;
+  height: 56px;
+  position: absolute;
+  bottom: -56px;
+  left: 0;
+}
+
+/* .direction:nth-of-type(2n) .direction__logos {
+  justify-content: flex-end;
+  left: unset;
+  right: 0;
+} */
+
+
+.direction_column .direction__brands {
+  width: 255px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  left: unset;
+  right: 0;
+}
+
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .direction__brands {
+    display: none;
+  }
+}

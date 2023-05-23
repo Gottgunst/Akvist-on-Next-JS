@@ -1,0 +1,26 @@
+.header__select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  height: var(--line-height__p-small);
+
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__p-small);
+  font-weight: var(--font-weight__medium);
+  color: inherit;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .header__select {
+    height: var(--line-height__p);
+    font-size: var(--font-size__p);
+  }
+}
+
+/* @media screen and (max-width: 791px) {
+  .header__select {
+  }
+} */

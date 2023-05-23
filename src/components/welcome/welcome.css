@@ -1,0 +1,20 @@
+.welcome {
+  max-width: 940px;
+  padding: 0 70px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .welcome {
+     padding: 0 var(--padding__section);
+  }
+}
+
+/* @media screen and (max-width: 791px) {
+  .welcome {
+
+  }
+} */

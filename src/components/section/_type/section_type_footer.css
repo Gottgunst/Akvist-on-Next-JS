@@ -1,0 +1,20 @@
+.section_type_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .section_type_footer {
+    max-width: 768px;
+    min-width: unset;
+  }
+}
+
+/* @media screen and (max-width: 791px) {
+  .section_type_footer {
+
+  }
+} */

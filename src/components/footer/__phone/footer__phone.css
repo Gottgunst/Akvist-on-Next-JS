@@ -1,0 +1,5 @@
+.footer__phone {
+  font-size: var(--font-size__quote);
+  font-weight: var(--font-weight__medium);
+  font-family: var(--font-family__h);
+}

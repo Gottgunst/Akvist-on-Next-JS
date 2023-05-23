@@ -1,0 +1,18 @@
+.contact__button {
+  min-width: 108px;
+  border-color: var(--color__border_white);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.contact__button[name='phone'] {
+  background-image: url('../../../../public/images/svg/phone.svg');
+  background-size: auto 20px;
+}
+
+.contact__button[name='email'] {
+  background-image: url('../../../../public/images/svg/email.svg');
+  background-size: auto 17px;
+}

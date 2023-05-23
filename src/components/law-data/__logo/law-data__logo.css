@@ -1,0 +1,6 @@
+.law-data__logo {
+  width: 110px;
+  height: 49px;
+  flex-shrink: 0;
+  fill: var(--color__text_p-small);
+}

@@ -1,0 +1,28 @@
+.header__menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 28px;
+
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__p);
+  line-height: var(--line-height__p);
+  font-weight: var(--font-weight__medium);
+  color: inherit;
+}
+
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .header__menu {
+     display: none;
+  }
+}
+
+/* @media screen and (max-width: 791px) {
+  .header__menu {
+
+  }
+}
+ */
