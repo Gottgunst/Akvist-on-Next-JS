@@ -21,11 +21,13 @@ export default function Direction({ direction, baseBrands }: IDirectProps) {
           target="_self"
           href={`/${direction.pageLink}`}
           title={direction.title}
+          style={{ position: 'relative', height: '100%', display: 'block' }}
         >
           <Image
             src={`/images/covers/${direction.image}`}
             alt={direction.title}
             fill={true}
+            sizes="(min-width: 1080px) 492px, (min-width: 900px) calc(100vw - 512px), (min-width: 800px) calc(22.5vw + 170px), (min-width: 380px) calc(100vw - 44px), calc(28.33vw + 214px)"
             className="direction__img"
           />
         </a>
