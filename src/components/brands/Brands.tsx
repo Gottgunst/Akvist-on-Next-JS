@@ -15,6 +15,7 @@ export default function Brands({ brand, noImage }: IBrandProps) {
           className="direction__brand"
           src={`/images/brands/${brand.image}`}
           fill={true}
+          sizes="120px"
           alt={brand.title}
           title={brand.title}
         />
