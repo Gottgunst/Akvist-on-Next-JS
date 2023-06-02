@@ -3,6 +3,9 @@ import { getData } from '@/data/getData';
 import Link from 'next/link';
 import { targetBranch } from '@/app/layout';
 
+//################ LAYOUT ####################
+import NavLink from '../navlink/NavLink';
+
 //################# STYLES ###################
 // import './header.css';
 
@@ -42,9 +45,9 @@ export async function Header() {
         <nav className="header__nav">
           <ul className="header__menu">
             <li>
-              <Link href="/" className="link popup-open">
+              <NavLink href="/" className="link popuip-open">
                 Продукты
-              </Link>
+              </NavLink>
               <nav className="header__popup">
                 <ul className="header__popup-menu">
                   {responseDirections.map(
@@ -64,9 +67,9 @@ export async function Header() {
               </nav>
             </li>
             <li>
-              <Link href="about" className="link">
+              <NavLink href="/about" className="link">
                 О нас
-              </Link>
+              </NavLink>
             </li>
             <li>Интернет-магазин</li>
             <li>

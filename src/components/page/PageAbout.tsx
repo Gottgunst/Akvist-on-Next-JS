@@ -11,7 +11,7 @@ import { headerClasses } from '../header/Header';
 
 //############## INTERFACE ###################
 
-export default async function PageAbout() {
+export async function PageAbout() {
   // useEffect(() => {
   //   document.querySelector('header')?.classList.remove('header_inverted');
   // }, []);
@@ -46,3 +46,4 @@ export default async function PageAbout() {
     </>
   );
 }
+export default PageAbout as unknown as () => JSX.Element;
