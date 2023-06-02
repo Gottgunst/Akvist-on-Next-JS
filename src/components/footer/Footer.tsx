@@ -8,7 +8,7 @@ import Link from 'next/link';
 //   baseDirections: IDirection[]
 // }
 
-export default async function Footer() {
+export async function Footer() {
   const responseBranches: IBranch[] = await getData({
     page: 'Branches',
     city: '*',
@@ -160,3 +160,5 @@ export default async function Footer() {
     </footer>
   );
 }
+
+export default Footer as unknown as () => JSX.Element;

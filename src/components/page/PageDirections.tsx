@@ -13,7 +13,8 @@ import Contacts from '@/components/contacts/Contacts';
 import { IBranch, IBrand, IContact, IDirection } from '@/models';
 import { headerClasses } from '../header/Header';
 
-export default async function PageDirections() {
+export async function PageDirections() {
+  //!!!! пересобрать это бы через Promies.all
   const responseContacts: IContact[] = await getData({
     page: 'Contacts',
     city: targetBranch,
@@ -27,6 +28,7 @@ export default async function PageDirections() {
     city: targetBranch,
   });
   const responseBrands: IBrand[] = await getData({ page: 'Brands' });
+
   // За один пробег делим направления на три группы
   // Находим id первого из комбинированных направлений
   // Собираем в строку бренды направлений из комбинированного блока
@@ -116,3 +118,4 @@ export default async function PageDirections() {
     </>
   );
 }
+export default PageDirections as unknown as () => JSX.Element;
