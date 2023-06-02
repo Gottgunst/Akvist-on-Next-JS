@@ -15,7 +15,10 @@ export default function NavLink({ href, className, children }: INavLinkProps) {
 
   const isActive = pathname === href;
   return (
-    <Link href={href} className={isActive ? className + ' active' : className}>
+    <Link
+      href={href}
+      className={isActive ? className + ' link_active' : className}
+    >
       {children}
     </Link>
   );

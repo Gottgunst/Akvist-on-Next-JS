@@ -11,12 +11,3 @@
 /* .link:visited {
   color: inherit;
 } */
-
-.active {
-  opacity: .4;
-  cursor: default;
-}
-
-.active:hover {
-  opacity: .4;
-}
