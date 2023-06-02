@@ -11,7 +11,7 @@ import { IBranch, IDirection } from '@/models';
 
 export const headerClasses = { list: 'header' };
 
-export default async function Header() {
+export async function Header() {
   const responseBranches: IBranch[] = await getData({
     page: 'Branches',
     city: '*',
@@ -116,3 +116,5 @@ export default async function Header() {
     </header>
   );
 }
+
+export default Header as unknown as () => JSX.Element;
