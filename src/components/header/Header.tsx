@@ -5,6 +5,7 @@ import { targetBranch } from '@/app/layout';
 
 //################ LAYOUT ####################
 import NavLink from '../navlink/NavLink';
+import DHeader from './DHeader';
 
 //################# STYLES ###################
 // import './header.css';
@@ -25,7 +26,7 @@ export async function Header() {
   });
 
   return (
-    <header className={headerClasses.list}>
+    <DHeader className="header">
       <div className="header__wrapper">
         <div className="header__logo logo">
           <svg viewBox="0 0 218 99">
@@ -73,9 +74,9 @@ export async function Header() {
             </li>
             <li>Интернет-магазин</li>
             <li>
-              <a href="#Contacts" className="link">
+              <Link href="#Contacts" className="link">
                 Контакты
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -116,7 +117,7 @@ export async function Header() {
         </nav>
         <nav className="header__menu-buthrefn">{/* POP-UP version */}</nav>
       </div>
-    </header>
+    </DHeader>
   );
 }
 
