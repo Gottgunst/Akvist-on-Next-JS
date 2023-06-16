@@ -82,7 +82,7 @@ export async function Footer({ branch }: IFooterProps) {
             <ul className="site-map__items">
               {responseBranches.map((branch) => (
                 <li key={branch.id_branch}>
-                  <NavLink href={branch.pageLink} className="link">
+                  <NavLink href={branch.pageLink + '#top'} className="link">
                     {branch.city}
                   </NavLink>
                 </li>

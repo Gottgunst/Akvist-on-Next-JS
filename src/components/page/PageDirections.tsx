@@ -84,7 +84,9 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
   return (
     <>
       <Cover />
-      <section className="section section_type_directions">{firstPart}</section>
+      <section className="section section_type_directions" id="Directions">
+        {firstPart}
+      </section>
 
       <section className="section section_background_grey section_type_two-columns">
         {combinePart}

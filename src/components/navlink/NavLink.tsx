@@ -13,7 +13,10 @@ interface INavLinkProps {
 export default function NavLink({ href, className, children }: INavLinkProps) {
   const pathname = usePathname();
 
-  let isActive = pathname === href;
+  const isActive =
+    href.indexOf('#') !== -1
+      ? pathname === href.slice(0, href.indexOf('#'))
+      : pathname === href;
 
   // switch (href) {
   //   case '/krasnodar':
