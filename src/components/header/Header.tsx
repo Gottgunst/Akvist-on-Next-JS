@@ -51,10 +51,7 @@ export async function Header({ branch }: IHeaderProps) {
         <nav className="header__nav">
           <ul className="header__menu">
             <li>
-              <NavLink
-                href={`${slash.slice(0, -1)}#Directions`}
-                className="link popuip-open"
-              >
+              <NavLink href={`${slash}#Directions`} className="link popup-open">
                 Продукты
               </NavLink>
               <nav className="header__popup">
@@ -64,7 +61,7 @@ export async function Header({ branch }: IHeaderProps) {
                       !direction.combine && (
                         <li key={direction.id_dir}>
                           <a
-                            href={'#' + direction.pageLink}
+                            href={slash.slice(0, -1) + '#' + direction.pageLink}
                             className="link header__popup-link"
                           >
                             {direction.title}
