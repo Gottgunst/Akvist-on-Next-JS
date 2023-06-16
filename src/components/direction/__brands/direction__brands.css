@@ -13,6 +13,10 @@
   right: 0;
 } */
 
+.direction:nth-of-type(2n) .direction__brands {
+  right: 0;
+  left: unset;
+}
 
 .direction_column .direction__brands {
   width: 255px;
