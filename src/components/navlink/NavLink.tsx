@@ -28,6 +28,14 @@ export default function NavLink({ href, className, children }: INavLinkProps) {
   //     break;
   // }
 
+  switch (href) {
+    case '/krasnodar':
+    case '/stavropol':
+    case '/pyatigorsk':
+      isActive = pathname.split('/').some((part) => part === href.slice(1));
+      break;
+  }
+
   return (
     <Link
       href={href}

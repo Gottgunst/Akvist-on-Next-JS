@@ -2,6 +2,7 @@
 import { getData } from '@/data/getData';
 import Link from 'next/link';
 import NavLink from '../navlink/NavLink';
+import { getSlash } from '@/context/targetBranch';
 
 //############## INTERFACE ###################
 interface IFooterProps {
@@ -19,6 +20,8 @@ export async function Footer({ branch }: IFooterProps) {
     page: 'Directions',
     city: targetBranch,
   });
+
+  const slash = getSlash(branch);
 
   return (
     <footer className="footer">
@@ -90,12 +93,12 @@ export async function Footer({ branch }: IFooterProps) {
             <h2 className="site-map__title">О компании</h2>
             <ul className="site-map__items">
               <li>
-                <NavLink href="/about" className="link">
+                <NavLink href={`${slash}/about`} className="link">
                   О нас
                 </NavLink>
               </li>
               <li>
-                <NavLink href="/about/#service" className="link">
+                <NavLink href={`${slash}/about/#service`} className="link">
                   Сервис
                 </NavLink>
               </li>
