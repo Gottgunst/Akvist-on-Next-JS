@@ -2,8 +2,6 @@
 //################# LIBS #####################
 import { usePathname } from 'next/navigation';
 
-//################ LAYOUT ####################
-
 //############## INTERFACE ###################
 interface IDHeaderProps {
   className: string;

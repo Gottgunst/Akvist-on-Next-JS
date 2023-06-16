@@ -1,23 +1,24 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import Link from 'next/link';
+import NavLink from '../navlink/NavLink';
 
 //############## INTERFACE ###################
-// interface IFooterProps {
-//   branches: IBranch[]
-//   baseDirections: IDirection[]
-// }
+interface IFooterProps {
+  branch: string;
+}
 
-export async function Footer() {
+export async function Footer({ branch }: IFooterProps) {
+  const targetBranch = branch || 'Ростов-на-Дону';
+
   const responseBranches: IBranch[] = await getData({
     page: 'Branches',
     city: '*',
   });
   const responseDirections: IDirection[] = await getData({
     page: 'Directions',
-    city: 'Ростов-на-Дону',
+    city: targetBranch,
   });
-  const targetBranch = 'Ростов-на-Дону';
 
   return (
     <footer className="footer">
@@ -34,12 +35,12 @@ export async function Footer() {
                   (direction) =>
                     !direction.combine && (
                       <li key={direction.id_dir}>
-                        <a
+                        <Link
                           href={'#' + direction.pageLink}
                           className="link site-map__link"
                         >
                           {direction.title}
-                        </a>
+                        </Link>
                       </li>
                     )
                 )}
@@ -60,9 +61,12 @@ export async function Footer() {
                     (direction) =>
                       direction.combine && (
                         <li key={direction.id_dir}>
-                          <a href={'#' + direction.pageLink} className="link">
+                          <Link
+                            href={'#' + direction.pageLink}
+                            className="link"
+                          >
                             {direction.title}
-                          </a>
+                          </Link>
                         </li>
                       )
                   )}
@@ -75,9 +79,9 @@ export async function Footer() {
             <ul className="site-map__items">
               {responseBranches.map((branch) => (
                 <li key={branch.id_branch}>
-                  <Link href={branch.pageLink} className="link">
+                  <NavLink href={branch.pageLink} className="link">
                     {branch.city}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -86,14 +90,14 @@ export async function Footer() {
             <h2 className="site-map__title">О компании</h2>
             <ul className="site-map__items">
               <li>
-                <Link href="about" className="link">
+                <NavLink href="/about" className="link">
                   О нас
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="about/#service" className="link">
+                <NavLink href="/about/#service" className="link">
                   Сервис
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -161,4 +165,4 @@ export async function Footer() {
   );
 }
 
-export default Footer as unknown as () => JSX.Element;
+export default Footer as unknown as ({ branch }: IFooterProps) => JSX.Element;

@@ -1,7 +1,6 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import Link from 'next/link';
-import { targetBranch } from '@/app/layout';
 
 //################ LAYOUT ####################
 import NavLink from '../navlink/NavLink';
@@ -12,19 +11,21 @@ import DHeader from './DHeader';
 
 //############## INTERFACE ###################
 import { IBranch, IDirection } from '@/models';
+interface IHeaderProps {
+  branch: string;
+}
 
-export const headerClasses = { list: 'header' };
-
-export async function Header() {
+export async function Header({ branch }: IHeaderProps) {
   const responseBranches: IBranch[] = await getData({
     page: 'Branches',
     city: '*',
   });
   const responseDirections: IDirection[] = await getData({
     page: 'Directions',
-    city: 'Ростов-на-Дону',
+    city: branch,
   });
 
+  const targetBranch = branch;
   return (
     <DHeader className="header">
       <div className="header__wrapper">
@@ -121,4 +122,4 @@ export async function Header() {
   );
 }
 
-export default Header as unknown as () => JSX.Element;
+export default Header as unknown as ({ branch }: IHeaderProps) => JSX.Element;
