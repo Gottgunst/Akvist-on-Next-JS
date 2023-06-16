@@ -1,5 +1,4 @@
 //################# LIBS #####################
-import { targetBranch } from '@/app/layout';
 import { getData } from '@/data/getData';
 
 //################ LAYOUT ####################
@@ -7,7 +6,13 @@ import Service from '@/components/service/Service';
 import Numbers from '@/components/numbers/Numbers';
 import Contacts from '@/components/contacts/Contacts';
 
-export async function PageAbout() {
+interface IPageAboutProps {
+  branch: string;
+}
+
+export async function PageAbout({ branch }: IPageAboutProps) {
+  const targetBranch = branch;
+
   const responseContacts: IContact[] = await getData({
     page: 'Contacts',
     city: targetBranch,
@@ -37,4 +42,6 @@ export async function PageAbout() {
     </>
   );
 }
-export default PageAbout as unknown as () => JSX.Element;
+export default PageAbout as unknown as ({
+  branch,
+}: IPageAboutProps) => JSX.Element;

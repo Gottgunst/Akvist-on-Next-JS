@@ -82,7 +82,7 @@ export async function Header({ branch }: IHeaderProps) {
             </li>
             <li>Интернет-магазин</li>
             <li>
-              <Link href="#Contacts" className="link">
+              <Link href={`${slash}#Contacts`} className="link">
                 Контакты
               </Link>
             </li>
