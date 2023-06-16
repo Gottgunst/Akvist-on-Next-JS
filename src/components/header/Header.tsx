@@ -11,6 +11,7 @@ import DHeader from './DHeader';
 
 //############## INTERFACE ###################
 import { IBranch, IDirection } from '@/models';
+import { getSlash } from '@/context/targetBranch';
 interface IHeaderProps {
   branch: string;
 }
@@ -24,6 +25,8 @@ export async function Header({ branch }: IHeaderProps) {
     page: 'Directions',
     city: branch,
   });
+
+  const slash = getSlash(branch);
 
   const targetBranch = branch;
   return (
@@ -47,7 +50,7 @@ export async function Header({ branch }: IHeaderProps) {
         <nav className="header__nav">
           <ul className="header__menu">
             <li>
-              <NavLink href="/" className="link popuip-open">
+              <NavLink href={`/${slash}`} className="link popuip-open">
                 Продукты
               </NavLink>
               <nav className="header__popup">
@@ -69,7 +72,7 @@ export async function Header({ branch }: IHeaderProps) {
               </nav>
             </li>
             <li>
-              <NavLink href="/about" className="link">
+              <NavLink href={`${slash}/about`} className="link">
                 О нас
               </NavLink>
             </li>

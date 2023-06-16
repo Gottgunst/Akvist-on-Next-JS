@@ -1,6 +1,6 @@
 
 
-export default function getTarget(city='Ростов-на-Дону'){
+export default function getTarget(city=''){
   switch (city) {
     case 'krasnodar':
       return 'Краснодар';
@@ -15,6 +15,23 @@ export default function getTarget(city='Ростов-на-Дону'){
       return 'Ростов-на-Дону';
       break;
   }
+}
+
+export function getSlash(target=''){
+    switch (target) {
+      case 'Краснодар':
+        return 'krasnodar';
+        break;
+      case 'Ставрополь':
+        return 'stavropol';
+        break;
+      case 'Пятигорск':
+        return 'pyatigorsk';
+        break;
+      default:
+        return '';
+        break;
+    }
 }
 
 

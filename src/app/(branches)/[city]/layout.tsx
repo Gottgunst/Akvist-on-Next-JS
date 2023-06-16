@@ -1,5 +1,4 @@
 //################# LIBS #####################
-import { Metadata } from 'next';
 
 //################ LAYOUT ####################
 import Header from '@/components/header/Header';
