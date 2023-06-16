@@ -20,16 +20,16 @@ export default function getTarget(city=''){
 export function getSlash(target=''){
     switch (target) {
       case 'Краснодар':
-        return 'krasnodar';
+        return '/krasnodar/';
         break;
       case 'Ставрополь':
-        return 'stavropol';
+        return '/stavropol/';
         break;
       case 'Пятигорск':
-        return 'pyatigorsk';
+        return '/pyatigorsk/';
         break;
       default:
-        return '';
+        return '/';
         break;
     }
 }

@@ -15,26 +15,16 @@ export default function NavLink({ href, className, children }: INavLinkProps) {
 
   let isActive = pathname === href;
 
-  // switch (href.replace('/', '').length - href.length) {
-  //   case 1:
-  //     isActive = href === '/';
-  //     break;
-  //   case 2:
-  //     // '/Krasnodar'
-  //     // '/Stavropol'
-  //     // '/Pyatigorsk'
+  // switch (href) {
+  //   case '/krasnodar':
+  //   case '/stavropol':
+  //   case '/pyatigorsk':
+  //     // if (pathname href)
+  //     isActive = pathname.split('/').some((part) => part === href.slice(1));
   //     break;
   //   default:
   //     break;
   // }
-
-  switch (href) {
-    case '/krasnodar':
-    case '/stavropol':
-    case '/pyatigorsk':
-      isActive = pathname.split('/').some((part) => part === href.slice(1));
-      break;
-  }
 
   return (
     <Link

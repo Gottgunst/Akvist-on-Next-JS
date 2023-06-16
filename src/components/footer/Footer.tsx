@@ -93,12 +93,12 @@ export async function Footer({ branch }: IFooterProps) {
             <h2 className="site-map__title">О компании</h2>
             <ul className="site-map__items">
               <li>
-                <NavLink href={`${slash}/about`} className="link">
+                <NavLink href={`${slash}about`} className="link">
                   О нас
                 </NavLink>
               </li>
               <li>
-                <NavLink href={`${slash}/about/#service`} className="link">
+                <NavLink href={`${slash}about/#service`} className="link">
                   Сервис
                 </NavLink>
               </li>

@@ -1,6 +1,7 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import Link from 'next/link';
+import { getSlash } from '@/context/targetBranch';
 
 //################ LAYOUT ####################
 import NavLink from '../navlink/NavLink';
@@ -11,7 +12,7 @@ import DHeader from './DHeader';
 
 //############## INTERFACE ###################
 import { IBranch, IDirection } from '@/models';
-import { getSlash } from '@/context/targetBranch';
+
 interface IHeaderProps {
   branch: string;
 }
@@ -50,7 +51,10 @@ export async function Header({ branch }: IHeaderProps) {
         <nav className="header__nav">
           <ul className="header__menu">
             <li>
-              <NavLink href={`/${slash}`} className="link popuip-open">
+              <NavLink
+                href={`${slash.slice(0, -1)}`}
+                className="link popuip-open"
+              >
                 Продукты
               </NavLink>
               <nav className="header__popup">
@@ -72,7 +76,7 @@ export async function Header({ branch }: IHeaderProps) {
               </nav>
             </li>
             <li>
-              <NavLink href={`${slash}/about`} className="link">
+              <NavLink href={`${slash}about`} className="link">
                 О нас
               </NavLink>
             </li>
