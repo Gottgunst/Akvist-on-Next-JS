@@ -1,5 +1,4 @@
 //################# LIBS #####################
-// import { useEffect } from 'react';
 import { targetBranch } from '@/app/layout';
 import { getData } from '@/data/getData';
 
@@ -7,14 +6,8 @@ import { getData } from '@/data/getData';
 import Service from '@/components/service/Service';
 import Numbers from '@/components/numbers/Numbers';
 import Contacts from '@/components/contacts/Contacts';
-import { headerClasses } from '../header/Header';
 
-//############## INTERFACE ###################
-
-export default async function PageAbout() {
-  // useEffect(() => {
-  //   document.querySelector('header')?.classList.remove('header_inverted');
-  // }, []);
+export async function PageAbout() {
   const responseContacts: IContact[] = await getData({
     page: 'Contacts',
     city: targetBranch,
@@ -23,8 +16,6 @@ export default async function PageAbout() {
     page: 'Branches',
     city: '*',
   });
-
-  headerClasses.list = 'header';
 
   return (
     <>
@@ -46,3 +37,4 @@ export default async function PageAbout() {
     </>
   );
 }
+export default PageAbout as unknown as () => JSX.Element;

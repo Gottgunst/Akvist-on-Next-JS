@@ -1,7 +1,11 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import Link from 'next/link';
-import { targetBranch } from '@/app/layout';
+import { getSlash } from '@/context/targetBranch';
+
+//################ LAYOUT ####################
+import NavLink from '../navlink/NavLink';
+import DHeader from './DHeader';
 
 //################# STYLES ###################
 // import './header.css';
@@ -9,20 +13,25 @@ import { targetBranch } from '@/app/layout';
 //############## INTERFACE ###################
 import { IBranch, IDirection } from '@/models';
 
-export const headerClasses = { list: 'header' };
+interface IHeaderProps {
+  branch: string;
+}
 
-export async function Header() {
+export async function Header({ branch }: IHeaderProps) {
   const responseBranches: IBranch[] = await getData({
     page: 'Branches',
     city: '*',
   });
   const responseDirections: IDirection[] = await getData({
     page: 'Directions',
-    city: 'Ростов-на-Дону',
+    city: branch,
   });
 
+  const slash = getSlash(branch);
+
+  const targetBranch = branch;
   return (
-    <header className={headerClasses.list}>
+    <DHeader className="header">
       <div className="header__wrapper">
         <div className="header__logo logo">
           <svg viewBox="0 0 218 99">
@@ -42,9 +51,12 @@ export async function Header() {
         <nav className="header__nav">
           <ul className="header__menu">
             <li>
-              <Link href="/" className="link popup-open">
+              <NavLink
+                href={`${slash.slice(0, -1)}`}
+                className="link popuip-open"
+              >
                 Продукты
-              </Link>
+              </NavLink>
               <nav className="header__popup">
                 <ul className="header__popup-menu">
                   {responseDirections.map(
@@ -64,15 +76,15 @@ export async function Header() {
               </nav>
             </li>
             <li>
-              <Link href="about" className="link">
+              <NavLink href={`${slash}about`} className="link">
                 О нас
-              </Link>
+              </NavLink>
             </li>
             <li>Интернет-магазин</li>
             <li>
-              <a href="#Contacts" className="link">
+              <Link href="#Contacts" className="link">
                 Контакты
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -113,8 +125,8 @@ export async function Header() {
         </nav>
         <nav className="header__menu-buthrefn">{/* POP-UP version */}</nav>
       </div>
-    </header>
+    </DHeader>
   );
 }
 
-export default Header as unknown as () => JSX.Element;
+export default Header as unknown as ({ branch }: IHeaderProps) => JSX.Element;

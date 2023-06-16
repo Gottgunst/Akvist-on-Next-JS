@@ -1,7 +1,5 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
-import { targetBranch } from '@/app/layout';
-import { useEffect } from 'react';
 
 //################ LAYOUT ####################
 import { Cover } from '@/components/cover/Cover';
@@ -11,9 +9,14 @@ import Contacts from '@/components/contacts/Contacts';
 
 //############## INTERFACE ###################
 import { IBranch, IBrand, IContact, IDirection } from '@/models';
-import { headerClasses } from '../header/Header';
 
-export async function PageDirections() {
+interface IPageDirectionsProps {
+  branch: string;
+}
+
+export async function PageDirections({ branch }: IPageDirectionsProps) {
+  const targetBranch = branch;
+
   //!!!! пересобрать это бы через Promies.all
   const responseContacts: IContact[] = await getData({
     page: 'Contacts',
@@ -78,8 +81,6 @@ export async function PageDirections() {
     (value, index) => combineArray.indexOf(value) === index
   );
 
-  headerClasses.list = 'header header_inverted';
-
   return (
     <>
       <Cover />
@@ -118,4 +119,6 @@ export async function PageDirections() {
     </>
   );
 }
-export default PageDirections as unknown as () => JSX.Element;
+export default PageDirections as unknown as ({
+  branch,
+}: IPageDirectionsProps) => JSX.Element;
