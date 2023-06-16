@@ -41,7 +41,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={golos.variable + ' ' + arimo.variable}>{children}</body>
+      <body className={golos.variable + ' ' + arimo.variable} id="top">
+        {children}
+      </body>
     </html>
   );
 }

@@ -52,7 +52,7 @@ export async function Header({ branch }: IHeaderProps) {
           <ul className="header__menu">
             <li>
               <NavLink
-                href={`${slash.slice(0, -1)}`}
+                href={`${slash.slice(0, -1)}#Directions`}
                 className="link popuip-open"
               >
                 Продукты
@@ -82,9 +82,9 @@ export async function Header({ branch }: IHeaderProps) {
             </li>
             <li>Интернет-магазин</li>
             <li>
-              <Link href="#Contacts" className="link">
+              <a href={`#Contacts`} className="link">
                 Контакты
-              </Link>
+              </a>
             </li>
           </ul>
 
