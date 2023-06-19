@@ -397,4 +397,4 @@ export const preContacts: IContact [] = [
     image: '#',
     city: 'Пятигорск'
   }
-]
+];
