@@ -120,7 +120,7 @@ export async function Header({ branch }: IHeaderProps) {
             </select> */}
           </div>
         </nav>
-        <nav className="header__menu-buthrefn">{/* POP-UP version */}</nav>
+        <nav className="header__menu-button">{/* POP-UP version */}</nav>
       </div>
     </DHeader>
   );
