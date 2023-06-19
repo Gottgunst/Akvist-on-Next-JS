@@ -1,6 +1,5 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
-import Link from 'next/link';
 import { getSlash } from '@/context/targetBranch';
 
 //################ LAYOUT ####################
