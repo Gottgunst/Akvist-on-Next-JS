@@ -1,4 +1,4 @@
-export function Service() {
+export default function Service() {
   return (
     <section className="section" id="service">
       <h2 className="section__title">Сервис</h2>
