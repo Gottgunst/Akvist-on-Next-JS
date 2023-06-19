@@ -1,6 +1,6 @@
-export default function Service() {
+export function Service() {
   return (
-    <section className="section">
+    <section className="section" id="service">
       <h2 className="section__title">Сервис</h2>
       <ul className="grid grid_type_service">
         <li>

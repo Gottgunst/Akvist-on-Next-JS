@@ -379,4 +379,4 @@ export const preBrands: IBrand [] = [
       image: './images/brands/Akvist.png',
       link: '#'
   }
-]
+];

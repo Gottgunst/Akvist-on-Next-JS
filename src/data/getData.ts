@@ -8,7 +8,7 @@ interface IGetDataProps {
 
 export async function getData({page, city}:IGetDataProps) {
 
-  const base:string = 'https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec';
+  const base = 'https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec';
 
   let url:string = page ?  base + '?page=' + page : base;
       url = city ?  url + '&city=' + city : url;

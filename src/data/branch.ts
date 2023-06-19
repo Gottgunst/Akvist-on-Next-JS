@@ -53,4 +53,4 @@ export const preBranch: IBranch[] = [
     map: '3A777f96b026e8497c0457107b9bfe2b5fe5eabcd503bd42eff55b6a6600f9d517',
     city: 'Пятигорск'
   }
-]
+];
