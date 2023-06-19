@@ -8,7 +8,7 @@ interface IBrandProps {
 
 export default function Brands({ brand, noImage }: IBrandProps) {
   return (
-    <li style={{ position: 'relative', minWidth: '120px', minHeight: '56px' }}>
+    <li className={noImage ? '' : 'direction__brands-li'}>
       {noImage && <span title={brand.description}>{brand.title}</span>}
       {!noImage && (
         <Image
