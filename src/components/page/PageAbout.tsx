@@ -5,6 +5,7 @@ import { getData } from '@/data/getData';
 import Service from '@/components/service/Service';
 import Numbers from '@/components/numbers/Numbers';
 import Contacts from '@/components/contacts/Contacts';
+import { IBranch, IContact } from '@/models';
 
 interface IPageAboutProps {
   branch: string;

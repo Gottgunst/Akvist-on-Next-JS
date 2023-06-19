@@ -3,6 +3,7 @@ import { getData } from '@/data/getData';
 import Link from 'next/link';
 import NavLink from '../navlink/NavLink';
 import { getSlash } from '@/context/targetBranch';
+import { IBranch, IDirection } from '@/models';
 
 //############## INTERFACE ###################
 interface IFooterProps {
@@ -148,16 +149,16 @@ export async function Footer({ branch }: IFooterProps) {
             © {new Date().getFullYear()} ООО «Вист»
           </p>
           <p className="law-data__politics">
-            Продолжая использовать наш сайт, вы даете согласие на обработку
-            файлов{' '}
+            Продолжая использовать наш сайт, вы&nbsp;даете согласие
+            на&nbsp;обработку файлов{' '}
             <Link href="#" className="link law-data__link">
               Cookies
             </Link>{' '}
-            и других пользовательских данных, в соответствии с 
+            и&nbsp;других пользовательских данных, в соответствии с&nbsp;
             <Link href="#" className="link law-data__link">
               Политикой конфиденциальности
             </Link>{' '}
-            и 
+            и&nbsp;
             <Link href="#" className="link law-data__link">
               Пользовательским соглашением
             </Link>
