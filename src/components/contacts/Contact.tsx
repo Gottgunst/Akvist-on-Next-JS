@@ -1,14 +1,8 @@
-import { MouseEventHandler } from 'react';
 import { IContact } from '../../models';
 
 interface ContactProps {
   contact: IContact;
 }
-
-function linker(evt: any) {
-  window.open(evt.target.value);
-}
-//button  onClick={linker}
 
 export function Contact({ contact }: ContactProps, key: number) {
   return (

@@ -1,7 +1,5 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
-import { targetBranch } from '@/app/layout';
-import { useEffect } from 'react';
 
 //################ LAYOUT ####################
 import { Cover } from '@/components/cover/Cover';
@@ -11,9 +9,15 @@ import Contacts from '@/components/contacts/Contacts';
 
 //############## INTERFACE ###################
 import { IBranch, IBrand, IContact, IDirection } from '@/models';
-import { headerClasses } from '../header/Header';
 
-export default async function PageDirections() {
+interface IPageDirectionsProps {
+  branch: string;
+}
+
+export async function PageDirections({ branch }: IPageDirectionsProps) {
+  const targetBranch = branch;
+
+  //!!!! пересобрать это бы через Promies.all
   const responseContacts: IContact[] = await getData({
     page: 'Contacts',
     city: targetBranch,
@@ -27,6 +31,7 @@ export default async function PageDirections() {
     city: targetBranch,
   });
   const responseBrands: IBrand[] = await getData({ page: 'Brands' });
+
   // За один пробег делим направления на три группы
   // Находим id первого из комбинированных направлений
   // Собираем в строку бренды направлений из комбинированного блока
@@ -76,12 +81,12 @@ export default async function PageDirections() {
     (value, index) => combineArray.indexOf(value) === index
   );
 
-  headerClasses.list = 'header header_inverted';
-
   return (
     <>
       <Cover />
-      <section className="section section_type_directions">{firstPart}</section>
+      <section className="section section_type_directions" id="Directions">
+        {firstPart}
+      </section>
 
       <section className="section section_background_grey section_type_two-columns">
         {combinePart}
@@ -116,3 +121,6 @@ export default async function PageDirections() {
     </>
   );
 }
+export default PageDirections as unknown as ({
+  branch,
+}: IPageDirectionsProps) => JSX.Element;

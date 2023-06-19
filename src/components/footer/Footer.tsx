@@ -1,23 +1,28 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import Link from 'next/link';
+import NavLink from '../navlink/NavLink';
+import { getSlash } from '@/context/targetBranch';
+import { IBranch, IDirection } from '@/models';
 
 //############## INTERFACE ###################
-// interface IFooterProps {
-//   branches: IBranch[]
-//   baseDirections: IDirection[]
-// }
+interface IFooterProps {
+  branch: string;
+}
 
-export default async function Footer() {
+export async function Footer({ branch }: IFooterProps) {
+  const targetBranch = branch || 'Ростов-на-Дону';
+
   const responseBranches: IBranch[] = await getData({
     page: 'Branches',
     city: '*',
   });
   const responseDirections: IDirection[] = await getData({
     page: 'Directions',
-    city: 'Ростов-на-Дону',
+    city: targetBranch,
   });
-  const targetBranch = 'Ростов-на-Дону';
+
+  const slash = getSlash(branch);
 
   return (
     <footer className="footer">
@@ -34,12 +39,12 @@ export default async function Footer() {
                   (direction) =>
                     !direction.combine && (
                       <li key={direction.id_dir}>
-                        <a
+                        <Link
                           href={'#' + direction.pageLink}
                           className="link site-map__link"
                         >
                           {direction.title}
-                        </a>
+                        </Link>
                       </li>
                     )
                 )}
@@ -60,9 +65,12 @@ export default async function Footer() {
                     (direction) =>
                       direction.combine && (
                         <li key={direction.id_dir}>
-                          <a href={'#' + direction.pageLink} className="link">
+                          <Link
+                            href={'#' + direction.pageLink}
+                            className="link"
+                          >
                             {direction.title}
-                          </a>
+                          </Link>
                         </li>
                       )
                   )}
@@ -75,9 +83,9 @@ export default async function Footer() {
             <ul className="site-map__items">
               {responseBranches.map((branch) => (
                 <li key={branch.id_branch}>
-                  <Link href={branch.pageLink} className="link">
+                  <NavLink href={branch.pageLink + '#top'} className="link">
                     {branch.city}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -86,14 +94,14 @@ export default async function Footer() {
             <h2 className="site-map__title">О компании</h2>
             <ul className="site-map__items">
               <li>
-                <Link href="about" className="link">
+                <NavLink href={`${slash}about`} className="link">
                   О нас
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link href="about/#service" className="link">
+                <NavLink href={`${slash}about/#service`} className="link">
                   Сервис
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -141,16 +149,16 @@ export default async function Footer() {
             © {new Date().getFullYear()} ООО «Вист»
           </p>
           <p className="law-data__politics">
-            Продолжая использовать наш сайт, вы даете согласие на обработку
-            файлов{' '}
+            Продолжая использовать наш сайт, вы&nbsp;даете согласие
+            на&nbsp;обработку файлов{' '}
             <Link href="#" className="link law-data__link">
               Cookies
             </Link>{' '}
-            и других пользовательских данных, в соответствии с 
+            и&nbsp;других пользовательских данных, в соответствии с&nbsp;
             <Link href="#" className="link law-data__link">
               Политикой конфиденциальности
             </Link>{' '}
-            и 
+            и&nbsp;
             <Link href="#" className="link law-data__link">
               Пользовательским соглашением
             </Link>
@@ -160,3 +168,5 @@ export default async function Footer() {
     </footer>
   );
 }
+
+export default Footer as unknown as ({ branch }: IFooterProps) => JSX.Element;

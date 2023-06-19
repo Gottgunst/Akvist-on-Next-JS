@@ -8,7 +8,7 @@ export function Cover() {
       <section className="cover">
         <div className="cover__wrapper">
           <h1 className="cover__motto">
-            Готовые решения для строительства и ремонта
+            Готовые решения для&nbsp;строительства и&nbsp;ремонта
           </h1>
         </div>
       </section>
