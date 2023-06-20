@@ -5,6 +5,7 @@ import { getSlash } from '@/context/targetBranch';
 //################ LAYOUT ####################
 import NavLink from '../navlink/NavLink';
 import DHeader from './DHeader';
+import Select from '../select/Select.tsx';
 
 //################# STYLES ###################
 // import './header.css';
@@ -89,21 +90,7 @@ export async function Header({ branch }: IHeaderProps) {
               )}
             </p>
 
-            {/* <select
-              className="header__select"
-              value={targetBranch}
-              onChange={change}
-            >
-              {responseBranches.map((branch) => (
-                <option
-                  className="header__city"
-                  value={branch.city}
-                  key={branch.id_branch}
-                >
-                  {branch.city}
-                </option>
-              ))}
-            </select> */}
+            <Select branch={branch}></Select>
           </div>
         </nav>
         <nav className="header__menu-button">{/* POP-UP version */}</nav>
