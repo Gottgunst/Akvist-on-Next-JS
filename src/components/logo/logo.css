@@ -2,4 +2,14 @@
   width: 100%;
   object-fit: contain;
   object-position: center;
+  background: url('../../../public/images/logos/Akvist.svg') center / contain no-repeat;
+  background-size: 110px;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 791px) {
+  .logo {
+    background-size: 79px;
+  }
 }
