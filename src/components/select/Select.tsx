@@ -34,7 +34,7 @@ export function Select({ branch, rBranches }: ISelectProps) {
         break;
     }
 
-    router.push(target + nonBranchPath);
+    router.push(target + nonBranchPath + '#top');
   };
 
   return (

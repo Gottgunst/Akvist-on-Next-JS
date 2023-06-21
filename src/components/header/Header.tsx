@@ -34,9 +34,9 @@ export async function Header({ branch }: IHeaderProps) {
   return (
     <DHeader className="header">
       <div className="header__wrapper">
-        <NavLink href={slash}>
+        <a href={slash}>
           <div className="header__logo logo"></div>
-        </NavLink>
+        </a>
 
         <nav className="header__nav">
           <ul className="header__menu">
