@@ -1,11 +1,12 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import { getSlash } from '@/context/targetBranch';
+import Link from 'next/link';
 
 //################ LAYOUT ####################
 import NavLink from '../navlink/NavLink';
 import DHeader from './DHeader';
-import Select from '../select/Select.tsx';
+import Select from '../select/Select';
 
 //################# STYLES ###################
 // import './header.css';
@@ -33,7 +34,9 @@ export async function Header({ branch }: IHeaderProps) {
   return (
     <DHeader className="header">
       <div className="header__wrapper">
-        <div className="header__logo logo"></div>
+        <NavLink href={slash}>
+          <div className="header__logo logo"></div>
+        </NavLink>
 
         <nav className="header__nav">
           <ul className="header__menu">
@@ -90,7 +93,7 @@ export async function Header({ branch }: IHeaderProps) {
               )}
             </p>
 
-            <Select branch={branch}></Select>
+            <Select branch={branch} rBranches={responseBranches}></Select>
           </div>
         </nav>
         <nav className="header__menu-button">{/* POP-UP version */}</nav>
