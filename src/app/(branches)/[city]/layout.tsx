@@ -58,3 +58,11 @@ export async function generateMetadata({
     keywords: `вист, аквист, компания вист, компания аквист, вист в ${target2}, стройматериалы в ${target2}, стройматериалы оптом, строительные материалы`,
   };
 }
+
+//################# Static ###################
+export async function generateStaticParams() {
+  const branches: string[] = ['krasnodar', 'stavropol', 'pyatigorsk'];
+  return branches.map((branch) => ({
+    city: branch,
+  }));
+}

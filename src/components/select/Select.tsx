@@ -22,7 +22,6 @@ export function Select({ branch, rBranches }: ISelectProps) {
     const target = getSlash(evt.target.value);
     let nonBranchPath = '';
     const pathArray = pathname.split('/');
-    console.log(pathname, pathname.length);
 
     switch (pathArray[1]) {
       case 'krasnodar':
@@ -34,8 +33,6 @@ export function Select({ branch, rBranches }: ISelectProps) {
         nonBranchPath = pathname;
         break;
     }
-
-    console.log(target, nonBranchPath);
 
     router.push(target + nonBranchPath);
   };
