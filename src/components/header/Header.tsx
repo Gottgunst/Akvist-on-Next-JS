@@ -90,7 +90,7 @@ export async function Header({ branch }: IHeaderProps) {
               )}
             </p>
 
-            <Select branch={branch}></Select>
+            <Select branch={branch} rBranches={responseBranches}></Select>
           </div>
         </nav>
         <nav className="header__menu-button">{/* POP-UP version */}</nav>
