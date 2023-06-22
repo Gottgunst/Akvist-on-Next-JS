@@ -1,7 +1,6 @@
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import { getSlash } from '@/context/targetBranch';
-import Link from 'next/link';
 
 //################ LAYOUT ####################
 import NavLink from '../navlink/NavLink';
