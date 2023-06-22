@@ -1,5 +1,5 @@
-FROM node:18-ubuntu
-WORKDIR /opt/app
+FROM node:18-alpine
+WORKDIR /html
 ADD package.json package.json
 RUN npm install
 ADD . .
