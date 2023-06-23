@@ -33,8 +33,26 @@ export default function NavLink({ href, className, children }: INavLinkProps) {
     <Link
       href={href}
       className={isActive ? className + ' link_active' : className}
+      scroll={false}
     >
       {children}
     </Link>
   );
 }
+
+// ##############
+// ##############
+// плавный скролл
+// ##############
+// ##############
+
+// function moveToAnchor(evt: any) {
+//   evt.preventDefault();
+//   const blockId = evt.target.href.slice(evt.target.href.indexOf('#') + 1);
+//   const yOffset = 40;
+
+//   const y =
+//     document.getElementById(blockId).getBoundingClientRect().top - yOffset;
+
+//   window.scrollTo({ top: y, behavior: 'smooth' });
+// }
