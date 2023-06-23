@@ -39,12 +39,12 @@ export async function Footer({ branch }: IFooterProps) {
                   (direction) =>
                     !direction.combine && (
                       <li key={direction.id_dir}>
-                        <Link
-                          href={'#' + direction.pageLink}
+                        <a
+                          href={slash.slice(0, -1) + '#' + direction.pageLink}
                           className="link site-map__link"
                         >
                           {direction.title}
-                        </Link>
+                        </a>
                       </li>
                     )
                 )}
@@ -65,12 +65,12 @@ export async function Footer({ branch }: IFooterProps) {
                     (direction) =>
                       direction.combine && (
                         <li key={direction.id_dir}>
-                          <Link
-                            href={'#' + direction.pageLink}
+                          <a
+                            href={slash.slice(0, -1) + '#' + direction.pageLink}
                             className="link"
                           >
                             {direction.title}
-                          </Link>
+                          </a>
                         </li>
                       )
                   )}
