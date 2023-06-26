@@ -1,6 +1,9 @@
+'use client';
+
 //################# LIBS #####################
 import { getData } from '@/data/getData';
 import { getSlash } from '@/context/targetBranch';
+import { motion } from 'framer-motion';
 
 //################ LAYOUT ####################
 import NavLink from '../navlink/NavLink';
@@ -30,6 +33,20 @@ export async function Header({ branch }: IHeaderProps) {
   const slash = getSlash(branch);
 
   const targetBranch = branch;
+
+  const variants = {
+    visible: {
+      marginRight: 20,
+      transition: {
+        when: 'beforeChildren',
+        staggerChildren: 0.1,
+      },
+    },
+    hidden: {
+      marginRight: 0,
+    },
+  };
+
   return (
     <DHeader className="header">
       <div className="header__wrapper">
@@ -63,7 +80,7 @@ export async function Header({ branch }: IHeaderProps) {
             </li>
             <li>
               <NavLink href={`${slash}about`} className="link">
-                О нас
+                О компании
               </NavLink>
             </li>
             <li>Интернет-магазин</li>
@@ -92,10 +109,75 @@ export async function Header({ branch }: IHeaderProps) {
               )}
             </p>
 
-            <Select branch={branch} rBranches={responseBranches}></Select>
+            <Select
+              branch={branch}
+              rBranches={responseBranches}
+              className="header__select"
+            ></Select>
           </div>
         </nav>
-        <nav className="header__menu-button">{/* POP-UP version */}</nav>
+        <button className="header__menu-button"></button>
+        <nav className="modal-menu">
+          <motion.div
+            className="modal-menu__block"
+            layout
+            variants={variants}
+            initial={'hidden'}
+            animate={{ x: 200 }}
+          >
+            <div className="modal-menu__section">
+              <a href={slash}>
+                <div className="logo modal-menu__logo"></div>
+              </a>
+              <Select
+                branch={branch}
+                rBranches={responseBranches}
+                className="header__select modal-menu__select"
+              ></Select>
+            </div>
+            <ul className="modal-menu__links">
+              <li>
+                <NavLink href={slash} className="link modal-menu__link">
+                  Продукты
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  href={`${slash}about`}
+                  className="link modal-menu__link"
+                >
+                  О компании
+                </NavLink>
+              </li>
+              <li>
+                <a href={`#Contacts`} className="link modal-menu__link">
+                  Интернет-магазин
+                </a>
+              </li>
+              <li>
+                <a href={`#Contacts`} className="link modal-menu__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <div className="modal-menu__phone">
+              {responseBranches.map(
+                (branch) =>
+                  branch.city === targetBranch && (
+                    <a
+                      href={`tel:+${branch.phone}`}
+                      key={branch.id_branch}
+                      className="link"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      +{branch.phone}
+                    </a>
+                  )
+              )}
+            </div>
+          </motion.div>
+        </nav>
       </div>
     </DHeader>
   );

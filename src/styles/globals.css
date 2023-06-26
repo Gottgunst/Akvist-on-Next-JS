@@ -142,3 +142,20 @@
 
 @import url('../components/service/__icon/service__icon.css');
 @import url('../components/service/__title/service__title.css');
+
+
+
+/* ######################################################################### */
+/* ############################ MODAL MENU ################################# */
+/* ######################################################################### */
+
+
+@import url('../components/modal-menu/modal-menu.css');
+@import url('../components/modal-menu/__block/modal-menu__block.css');
+@import url('../components/modal-menu/__section/modal-menu__section.css');
+
+@import url('../components/modal-menu/__logo/modal-menu__logo.css');
+@import url('../components/modal-menu/__select/modal-menu__select.css');
+@import url('../components/modal-menu/__phone/modal-menu__phone.css');
+@import url('../components/modal-menu/__links/modal-menu__links.css');
+@import url('../components/modal-menu/__link/modal-menu__link.css');

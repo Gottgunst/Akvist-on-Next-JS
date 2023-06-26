@@ -1,0 +1,31 @@
+.modal-menu__phone {
+  color: var(--color__text_invert);
+
+  font-size: var(--font-size__quote);
+  font-weight: var(--font-weight__medium);
+  line-height: var(--line-height__quote);
+  font-family: var(--font-family__h);
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .modal-menu__phone {
+    width: auto;
+    height: auto;
+    grid-area: logo;
+    padding: 32px 35px 22px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .modal-menu__phone {
+    grid-area: phone;
+    border-top: 1.5px solid var(--color__border_menu);
+    padding: 20px 0 20px 35px;
+    justify-content: start;
+  }
+}

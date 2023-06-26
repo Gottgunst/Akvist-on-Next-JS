@@ -1,0 +1,20 @@
+.modal-menu__links {
+  grid-area: menu;
+  display: grid;
+  justify-items: stretch;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .modal-menu__links {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .modal-menu__links {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(44px, 64px));
+  }
+}
