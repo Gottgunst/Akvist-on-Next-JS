@@ -52,8 +52,4 @@ export function Select({ branch, rBranches, className }: ISelectProps) {
     </select>
   );
 }
-export default Select as unknown as ({
-  branch,
-  rBranches,
-  className,
-}: ISelectProps) => JSX.Element;
+export default Select as unknown as (props: ISelectProps) => JSX.Element;
