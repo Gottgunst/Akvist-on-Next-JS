@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 1079px) {
   .modal-menu {
-    display: block;
+    /* display: block; */
   }
 }
 
