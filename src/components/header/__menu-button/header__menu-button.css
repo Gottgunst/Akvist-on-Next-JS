@@ -7,7 +7,9 @@
   align-items: center;
   cursor: pointer;
   border-radius: var(--border-radius__small);
-  margin-top: 19px;
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 .header__menu-button::before {
@@ -33,10 +35,14 @@
 @media screen and (max-width: 1079px) {
   .header__menu-button {
     display: flex;
+    position: fixed;
+    top: 19px;
+    right: var(--padding__section);
   }
 }
 
 /* @media screen and (max-width: 791px) {
   .header__menu-button {
+    rig
   }
 } */

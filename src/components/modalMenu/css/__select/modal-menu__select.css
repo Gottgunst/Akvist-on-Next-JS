@@ -1,0 +1,4 @@
+.modal-menu__select {
+  z-index: 5;
+  color: var(--color__text_invert);
+}

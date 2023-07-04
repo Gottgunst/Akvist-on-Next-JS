@@ -1,0 +1,32 @@
+.modal-menu__link {
+  color: var(--color__text_invert);
+  display: flex;
+  height: 100%;
+  width: 1fr;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-family: var(--font-family__h);
+  font-weight: var(--font-weight__medium);
+}
+
+.modal-menu__link:hover,
+.modal-menu__link:active {
+  background: rgba(255, 255, 255, 0.30);
+  opacity: 1;
+}
+
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .modal-menu__link {}
+} */
+
+@media screen and (max-width: 791px) {
+  .modal-menu__link {
+    padding-left: 35px;
+    justify-content: start;
+  }
+}

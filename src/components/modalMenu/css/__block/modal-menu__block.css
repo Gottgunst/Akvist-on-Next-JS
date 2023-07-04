@@ -1,0 +1,49 @@
+.modal-menu__block {
+  height: 188px;
+  position: relative;
+  box-sizing: border-box;
+
+  background: linear-gradient(171deg, #177C1B 0%, #16751A 100%), #177C1B;
+  box-shadow: 0px 4px 68px 0px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .modal-menu__block {
+    width: auto;
+    display: grid;
+
+    grid-template-areas:
+      'logo'
+      'menu';
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 66px;
+
+    margin-left: calc(var(--padding__section)/2);
+    margin-right: calc(var(--padding__section)/2);
+
+    border-radius: 0px 0px 8px 8px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .modal-menu__block {
+    width: 280px;
+    height: calc(100vh - var(--padding__section)*2);
+
+    float: right;
+    grid-template-areas:
+      'logo'
+      'menu'
+      'phone';
+    grid-template-rows: 74px 1fr 64px;
+
+    margin: var(--padding__section) 0;
+
+    border-radius: 8px 0px 0px 8px;
+  }
+}
