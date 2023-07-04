@@ -6,6 +6,7 @@ import { getSlash } from '@/context/targetBranch';
 import NavLink from '../navlink/NavLink';
 import DHeader from './DHeader';
 import Select from '../select/Select';
+import ModalMenu from '../modalMenu/ModalMenu';
 
 //################# STYLES ###################
 // import './header.css';
@@ -63,7 +64,7 @@ export async function Header({ branch }: IHeaderProps) {
             </li>
             <li>
               <NavLink href={`${slash}about`} className="link">
-                О нас
+                О компании
               </NavLink>
             </li>
             <li>Интернет-магазин</li>
@@ -92,10 +93,15 @@ export async function Header({ branch }: IHeaderProps) {
               )}
             </p>
 
-            <Select branch={branch} rBranches={responseBranches}></Select>
+            <Select
+              branch={branch}
+              rBranches={responseBranches}
+              className="header__select"
+            ></Select>
           </div>
         </nav>
-        <nav className="header__menu-button">{/* POP-UP version */}</nav>
+
+        <ModalMenu branch={branch} responseBranches={responseBranches} />
       </div>
     </DHeader>
   );

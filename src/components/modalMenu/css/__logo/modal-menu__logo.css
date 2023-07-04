@@ -1,0 +1,22 @@
+.modal-menu__logo {
+
+  flex-shrink: 0;
+  background-image: url('../../../../../public/images/logos/Akvist_grey.svg');
+}
+
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .modal-menu__logo {
+    width: 110px;
+    height: 49px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .modal-menu__logo {
+    width: 73px;
+    height: 33px;
+  }
+}

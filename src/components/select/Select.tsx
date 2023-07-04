@@ -12,9 +12,10 @@ import { IBranch } from '@/models';
 interface ISelectProps {
   branch: string;
   rBranches: IBranch[];
+  className: string;
 }
 
-export function Select({ branch, rBranches }: ISelectProps) {
+export function Select({ branch, rBranches, className }: ISelectProps) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -38,7 +39,7 @@ export function Select({ branch, rBranches }: ISelectProps) {
   };
 
   return (
-    <select className="header__select" value={branch} onChange={changeCity}>
+    <select className={className} value={branch} onChange={changeCity}>
       {rBranches.map((branch) => (
         <option
           className="header__city"
@@ -51,7 +52,4 @@ export function Select({ branch, rBranches }: ISelectProps) {
     </select>
   );
 }
-export default Select as unknown as ({
-  branch,
-  rBranches,
-}: ISelectProps) => JSX.Element;
+export default Select as unknown as (props: ISelectProps) => JSX.Element;

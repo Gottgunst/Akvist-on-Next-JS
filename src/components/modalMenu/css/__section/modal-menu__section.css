@@ -1,0 +1,23 @@
+.modal-menu__section {
+  display: flex;
+  justify-content: space-between;
+  grid-area: logo;
+
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .modal-menu__section {
+    padding: 32px 35px 22px;
+    align-items: start;
+    border-bottom: 1.5px solid var(--color__border_menu);
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .modal-menu__section {
+    align-items: center;
+    padding: 20px 20px 20px 22px;
+  }
+}
