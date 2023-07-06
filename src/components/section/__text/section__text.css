@@ -8,6 +8,7 @@
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 
+  padding-top: 12px;
   text-overflow: ellipsis;
   overflow: hidden;
 }

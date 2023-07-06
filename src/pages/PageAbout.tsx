@@ -6,6 +6,7 @@ import Service from '@/components/service/Service';
 import Numbers from '@/components/numbers/Numbers';
 import Contacts from '@/components/contacts/Contacts';
 import { IBranch, IContact } from '@/models';
+import { Auditoria } from '@/components/Auditoria';
 
 interface IPageAboutProps {
   branch: string;
@@ -27,6 +28,9 @@ export async function PageAbout({ branch }: IPageAboutProps) {
     <>
       <hr className="header-compensation" />
       <Numbers />
+
+      <Auditoria />
+
       <Service />
       <section className="section section_type_contacts" id="Contacts">
         {responseBranches.map(
@@ -43,6 +47,4 @@ export async function PageAbout({ branch }: IPageAboutProps) {
     </>
   );
 }
-export default PageAbout as unknown as ({
-  branch,
-}: IPageAboutProps) => JSX.Element;
+export default PageAbout as unknown as (props: IPageAboutProps) => JSX.Element;
