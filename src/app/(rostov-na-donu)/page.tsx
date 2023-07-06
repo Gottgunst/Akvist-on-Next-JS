@@ -1,4 +1,4 @@
-import PageDirections from '@/components/page/PageDirections';
+import PageDirections from '@/pages/PageDirections';
 import getTarget from '@/context/targetBranch';
 
 export default async function Home({ params }: { params: { city: string } }) {
