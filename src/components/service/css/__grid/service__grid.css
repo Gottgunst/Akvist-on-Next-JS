@@ -1,0 +1,26 @@
+.service__grid {
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 53px 0 189px;
+}
+
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .service__grid {
+    grid-template-columns: repeat(2, minmax(300px, min-content));
+    align-content: center;
+    justify-content: space-around;
+    gap: 20px 0;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .service__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, min-content));
+    justify-content: space-around;
+    text-align: center;
+    justify-items: center;
+  }
+}

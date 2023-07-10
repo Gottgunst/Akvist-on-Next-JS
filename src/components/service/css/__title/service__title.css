@@ -1,0 +1,19 @@
+.service__title {
+  padding-bottom: 12px;
+}
+
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .service__title {
+    
+  }
+} */
+
+@media screen and (max-width: 791px) {
+  .service__title {
+    text-align: center;
+    padding-bottom: 0;
+  }
+}
