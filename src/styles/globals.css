@@ -70,8 +70,6 @@
 @import url('../components/grid/grid.css');
 
 
-@import url('../components/contacts/contacts.css');
-@import url('../components/contacts/__grid/contacts__grid.css');
 
 @import url('../components/contact/contact.css');
 @import url('../components/contact/__title/contact__title.css');
@@ -124,27 +122,3 @@
 /* @import url('../components/direction/__header/direction__header.css'); */
 @import url('../components/direction/__description/direction__description.css');
 @import url('../components/direction/__button/direction__button.css');
-
-
-/* ######################################################################### */
-/* ######################### ABOUT PAGE STYLES ############################# */
-/* ######################################################################### */
-
-@import url('../components/section/_type/section_type_numbers.css');
-
-@import url('../components/grid/_type/grid_type_service.css');
-@import url('../components/grid/_type/grid_type_numbers.css');
-
-/* @import url('../components/numbers/numbers.css'); */
-@import url('../components/numbers/__digit/numbers__digit.css');
-@import url('../components/numbers/__caption/numbers__caption.css');
-
-
-@import url('../components/service/__icon/service__icon.css');
-@import url('../components/service/__title/service__title.css');
-
-
-
-/* ######################################################################### */
-/* ############################ MODAL MENU ################################# */
-/* ######################################################################### */

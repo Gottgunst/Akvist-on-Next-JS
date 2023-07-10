@@ -4,3 +4,18 @@
   line-height: var(--line-height__h2);
   font-weight: var(--font-weight__bold);
 }
+
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .section__title {
+    
+  }
+} */
+
+/* @media screen and (max-width: 791px) {
+  .section__title {
+    text-align: center;
+  }
+} */

@@ -13,6 +13,6 @@ export function {{pascalCase}}({}: I{{pascalCase}}Props) {
   return (
 
   );
-};
+}
 
 export default {{pascalCase}} as unknown as (props: I{{pascalCase}}Props) => JSX.Element;

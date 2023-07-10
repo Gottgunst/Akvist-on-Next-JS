@@ -1,0 +1,7 @@
+.distribution__title {
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__h1);
+  line-height: var(--line-height__h1);
+  font-weight: var(--font-weight__bold);
+  max-width: 290px;
+}

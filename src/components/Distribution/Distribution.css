@@ -1,0 +1,10 @@
+@import url('./css/distribution.css');
+
+@import url('./css/__map/distribution__map.css');
+@import url('./css/__about/distribution__about.css');
+
+@import url('./css/__image/distribution__image.css');
+
+@import url('./css/__title/distribution__title.css');
+@import url('./css/__text/distribution__text.css');
+@import url('./css/__quote/distribution__quote.css');
