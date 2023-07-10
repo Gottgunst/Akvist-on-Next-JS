@@ -1,0 +1,20 @@
+.numbers__caption {
+  padding-top: 12px;
+  white-space: nowrap;
+}
+
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .numbers__caption {
+    padding-top: 0;
+  }
+}
+
+
+@media screen and (max-width: 791px) {
+  .numbers__caption {
+    padding-top: 12px;
+  }
+}

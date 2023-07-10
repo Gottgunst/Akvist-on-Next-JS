@@ -1,0 +1,30 @@
+.numbers__grid {
+  grid-template-columns: repeat(3, minmax(50px, min-content)) auto;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 1.5px solid;
+  border-bottom: 1.5px solid;
+  border-color: var(--color__accent_green);
+  padding: 40px 80px;
+  box-sizing: border-box;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .numbers__grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .numbers__grid {
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fill, minmax(220px, min-content));
+    gap: 40px;
+    justify-items: center;
+    text-align: center;
+  }
+}

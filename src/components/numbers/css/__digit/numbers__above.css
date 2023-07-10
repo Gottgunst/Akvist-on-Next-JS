@@ -1,0 +1,21 @@
+.numbers__above {
+  /* font-size: var(--font-size__p); */
+  line-height: var(--font-size__p);
+  /* font-weight: var(--font-weight__regular); */
+  /* font-family: var(--font-family__p); */
+  color: var(--color__accent_green);
+}
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .numbers__above {
+    
+  }
+} */
+
+@media screen and (max-width: 791px) {
+  .numbers__above {
+    padding-bottom: 10px;
+  }
+}
