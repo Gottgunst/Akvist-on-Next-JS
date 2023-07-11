@@ -1,6 +1,6 @@
 import { IContact } from '../models';
 
-export const preContacts: IContact [] = [
+export const preContacts: IContact[] = [
   {
     id_con: 1,
     title: 'Сухие строительные смеси',
@@ -11,7 +11,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 2,
@@ -23,7 +23,7 @@ export const preContacts: IContact [] = [
     site: 'vistpotolok.ru',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 3,
@@ -35,7 +35,7 @@ export const preContacts: IContact [] = [
     site: 'vistdecor.ru',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 4,
@@ -47,7 +47,7 @@ export const preContacts: IContact [] = [
     site: 'vistacoustic.ru',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 5,
@@ -59,7 +59,7 @@ export const preContacts: IContact [] = [
     site: 'vistenergy.ru',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 6,
@@ -71,7 +71,7 @@ export const preContacts: IContact [] = [
     site: 'biodomug.ru',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 7,
@@ -83,7 +83,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 8,
@@ -95,7 +95,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Ростов-на-Дону'
+    city: 'Ростов-на-Дону',
   },
   {
     id_con: 9,
@@ -107,7 +107,7 @@ export const preContacts: IContact [] = [
     site: 'vistpotolok.ru',
     social: '@vist_krd_potolok',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 10,
@@ -119,7 +119,7 @@ export const preContacts: IContact [] = [
     site: 'vistdecor.ru',
     social: '@vist_soframap_krd',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 11,
@@ -131,7 +131,7 @@ export const preContacts: IContact [] = [
     site: 'vistacoustic.ru',
     social: '',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 12,
@@ -143,7 +143,7 @@ export const preContacts: IContact [] = [
     site: 'vistenergy.ru',
     social: '',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 13,
@@ -155,7 +155,7 @@ export const preContacts: IContact [] = [
     site: 'biodomug.ru',
     social: '',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 14,
@@ -167,7 +167,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 15,
@@ -179,7 +179,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 16,
@@ -191,7 +191,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Краснодар'
+    city: 'Краснодар',
   },
   {
     id_con: 17,
@@ -203,7 +203,7 @@ export const preContacts: IContact [] = [
     site: 'vistpotolok.ru',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 18,
@@ -215,7 +215,7 @@ export const preContacts: IContact [] = [
     site: 'vistacoustic.ru',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 19,
@@ -227,7 +227,7 @@ export const preContacts: IContact [] = [
     site: 'vistdecor.ru',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 20,
@@ -239,7 +239,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 21,
@@ -251,7 +251,7 @@ export const preContacts: IContact [] = [
     site: 'vistenergy.ru',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 22,
@@ -263,7 +263,7 @@ export const preContacts: IContact [] = [
     site: 'biodomug.ru',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 23,
@@ -275,7 +275,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 24,
@@ -287,7 +287,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 25,
@@ -299,7 +299,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Ставрополь'
+    city: 'Ставрополь',
   },
   {
     id_con: 26,
@@ -311,7 +311,7 @@ export const preContacts: IContact [] = [
     site: 'vistpotolok.ru',
     social: '',
     image: '#',
-    city: 'Пятигорск'
+    city: 'Пятигорск',
   },
   {
     id_con: 27,
@@ -323,7 +323,7 @@ export const preContacts: IContact [] = [
     site: 'vistdecor.ru',
     social: '',
     image: '#',
-    city: 'Пятигорск'
+    city: 'Пятигорск',
   },
   {
     id_con: 28,
@@ -335,7 +335,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Пятигорск'
+    city: 'Пятигорск',
   },
   {
     id_con: 29,
@@ -347,7 +347,7 @@ export const preContacts: IContact [] = [
     site: 'vistacoustic.ru',
     social: '',
     image: '#',
-    city: 'Пятигорск'
+    city: 'Пятигорск',
   },
   {
     id_con: 30,
@@ -359,7 +359,7 @@ export const preContacts: IContact [] = [
     site: 'vistenergy.ru',
     social: '',
     image: '#',
-    city: 'Пятигорск'
+    city: 'Пятигорск',
   },
   {
     id_con: 31,
@@ -371,7 +371,7 @@ export const preContacts: IContact [] = [
     site: 'biodomug.ru',
     social: '',
     image: '#',
-    city: 'Пятигорск'
+    city: 'Пятигорск',
   },
   {
     id_con: 32,
@@ -383,7 +383,7 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Пятигорск'
+    city: 'Пятигорск',
   },
   {
     id_con: 33,
@@ -395,6 +395,6 @@ export const preContacts: IContact [] = [
     site: '',
     social: '',
     image: '#',
-    city: 'Пятигорск'
-  }
+    city: 'Пятигорск',
+  },
 ];

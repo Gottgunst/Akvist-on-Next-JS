@@ -4,10 +4,11 @@ import Image from 'next/image';
 //################ LAYOUT ###################
 
 //########### INTERFACE & STYLES ##############
-import { IAuditoriaProps } from '.';
+// import { IAuditoriaProps } from '.';
 import './Auditoria.css';
 
-export function Auditoria({}: IAuditoriaProps) {
+export function Auditoria() {
+  //{}: IAuditoriaProps) {
   return (
     <div className="section auditoria">
       <Image
@@ -33,11 +34,11 @@ export function Auditoria({}: IAuditoriaProps) {
       />
       <div className="auditoria__text">
         <h3 className="section__title section__title_type_article">
-          Дизайнерам и архитекторам
+          Дизайнерам и&nbsp;архитекторам
         </h3>
         <p className="section__text">
-          Подбор и расчёт материалов для любого проекта. Предоставление образцов
-          и готовых решений. Консультации при реализации проекта.
+          Подбор и расчёт материалов для&nbsp;любого проекта. Предоставление
+          образцов и готовых решений. Консультации при реализации проекта.
         </p>
       </div>
       <Image
@@ -51,9 +52,9 @@ export function Auditoria({}: IAuditoriaProps) {
           Заказчикам
         </h3>
         <p className="section__text ">
-          Подбор и расчёт материалов в соответствии с проектом. Предложение
-          альтернативных решений. Оптимальное соотношение цены и качества на
-          материалы. Соблюдение сроков поставки.
+          Подбор и расчёт материалов в соответствии с&nbsp;проектом. Предложение
+          альтернативных решений. Оптимальное соотношение цены и&nbsp;качества
+          на материалы. Соблюдение сроков поставки.
         </p>
       </div>
 
@@ -68,4 +69,4 @@ export function Auditoria({}: IAuditoriaProps) {
   );
 }
 
-export default Auditoria as unknown as (props: IAuditoriaProps) => JSX.Element;
+export default Auditoria; // as unknown as (props: IAuditoriaProps) => JSX.Element;

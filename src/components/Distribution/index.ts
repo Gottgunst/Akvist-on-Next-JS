@@ -1,2 +1,2 @@
 export * from './Distribution';
-export * from './IDistribution.props';
+// export * from './IDistribution.props';

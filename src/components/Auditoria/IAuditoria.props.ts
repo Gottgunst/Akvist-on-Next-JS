@@ -1,3 +1,3 @@
-export interface IAuditoriaProps{
-
-}
+// export interface IAuditoriaProps{
+  
+// }

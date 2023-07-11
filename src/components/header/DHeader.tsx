@@ -9,7 +9,7 @@ interface IDHeaderProps {
 }
 
 export function DHeader({ className, children }: IDHeaderProps) {
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
   const isAbout = pathname.search(/\/about/g) != -1;
   return (
     <header className={isAbout ? className : className + ' header_inverted'}>

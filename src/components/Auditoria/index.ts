@@ -1,2 +1,2 @@
 export * from './Auditoria';
-export * from './IAuditoria.props';
+// export * from './IAuditoria.props';

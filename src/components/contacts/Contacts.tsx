@@ -1,7 +1,6 @@
-'use client';
-
 //################# LIBS ####################
 import { getData } from '@/data/getData';
+import { preContacts } from '@/data/contacts';
 
 //################ LAYOUT ###################
 import { Contact } from '../contact/Contact';
@@ -11,12 +10,13 @@ import { IContact } from '@/models';
 import { IContactsProps } from '.';
 import './Contacts.css';
 
-export async function Contacts({ branch, response, index }: IContactsProps) {
+export async function Contacts({ branch, response, key }: IContactsProps) {
   //
-  const responseContacts: IContact[] = await getData({
-    page: 'Contacts',
-    city: branch,
-  });
+  const responseContacts: IContact[] =
+    (await getData({
+      page: 'Contacts',
+      city: branch,
+    })) || preContacts;
 
   // console.log(targetBranch);
   // Подготовка ссылок для карт
@@ -30,7 +30,7 @@ export async function Contacts({ branch, response, index }: IContactsProps) {
   // }; //          //onClick={mapLink}
 
   return (
-    <section className="section contacts" id="Contacts" data-id={index}>
+    <section className="section contacts" id="Contacts" key={key}>
       <div className="contacts__wrapper">
         <h2 className="section__title contacts__head">
           Контакты руководителей

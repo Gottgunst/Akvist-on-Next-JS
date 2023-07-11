@@ -1,7 +1,0 @@
-body {
-  min-width: 343px;
-  font-family: var(--font-family__p);
-  line-height: var(--line-height__p);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
