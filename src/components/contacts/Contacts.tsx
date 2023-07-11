@@ -1,6 +1,5 @@
 //################# LIBS ####################
 import { getData } from '@/data/getData';
-import { preContacts } from '@/data/contacts';
 
 //################ LAYOUT ###################
 import { Contact } from '../contact/Contact';
@@ -12,11 +11,10 @@ import './Contacts.css';
 
 export async function Contacts({ branch, response, key }: IContactsProps) {
   //
-  const responseContacts: IContact[] =
-    (await getData({
-      page: 'Contacts',
-      city: branch,
-    })) || preContacts;
+  const responseContacts: IContact[] = await getData({
+    page: 'Contacts',
+    city: branch,
+  });
 
   // console.log(targetBranch);
   // Подготовка ссылок для карт
@@ -37,7 +35,7 @@ export async function Contacts({ branch, response, key }: IContactsProps) {
         </h2>
         <div className="contacts__grid">
           {responseContacts.map((contact) => (
-            <Contact contact={contact} key={contact.id_con} />
+            <Contact contact={contact} key={contact.id} />
           ))}
         </div>
         <div className="branch">

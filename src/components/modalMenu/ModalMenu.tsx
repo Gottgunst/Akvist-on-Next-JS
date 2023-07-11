@@ -77,11 +77,11 @@ export function ModalMenu({ branch, responseBranches }: IModalMenuProps) {
           </ul>
           <div className="modal-menu__phone">
             {responseBranches.map(
-              (branch) =>
+              (branch, index) =>
                 branch.city === targetBranch && (
                   <a
                     href={`tel:+${branch.phone}`}
-                    key={branch.id_branch}
+                    key={index}
                     className="link"
                     target="_blank"
                     rel="noreferrer"

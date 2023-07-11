@@ -49,7 +49,7 @@ export async function Header({ branch }: IHeaderProps) {
                   {responseDirections.map(
                     (direction) =>
                       !direction.combine && (
-                        <li key={direction.id_dir}>
+                        <li key={direction.id}>
                           <a
                             href={slash.slice(0, -1) + '#' + direction.pageLink}
                             className="link header__popup-link"
@@ -82,7 +82,7 @@ export async function Header({ branch }: IHeaderProps) {
                   branch.city === targetBranch && (
                     <a
                       href={`tel:+${branch.phone}`}
-                      key={branch.id_branch}
+                      key={branch.id}
                       className="header__link"
                       target="_blank"
                       rel="noreferrer"

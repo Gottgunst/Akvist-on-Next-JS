@@ -11,7 +11,7 @@ interface IFooterProps {
 }
 
 export async function Footer({ branch }: IFooterProps) {
-  const targetBranch = branch || 'Ростов-на-Дону';
+  const targetBranch = branch;
 
   const responseBranches: IBranch[] = await getData({
     page: 'Branches',
@@ -19,7 +19,7 @@ export async function Footer({ branch }: IFooterProps) {
   });
   const responseDirections: IDirection[] = await getData({
     page: 'Directions',
-    city: targetBranch,
+    city: branch,
   });
 
   const slash = getSlash(branch);
@@ -38,7 +38,7 @@ export async function Footer({ branch }: IFooterProps) {
                 {responseDirections.map(
                   (direction) =>
                     !direction.combine && (
-                      <li key={direction.id_dir}>
+                      <li key={direction.id}>
                         <a
                           href={slash.slice(0, -1) + '#' + direction.pageLink}
                           className="link site-map__link"
@@ -64,7 +64,7 @@ export async function Footer({ branch }: IFooterProps) {
                   {responseDirections.map(
                     (direction) =>
                       direction.combine && (
-                        <li key={direction.id_dir}>
+                        <li key={direction.id}>
                           <a
                             href={slash.slice(0, -1) + '#' + direction.pageLink}
                             className="link"
@@ -82,7 +82,7 @@ export async function Footer({ branch }: IFooterProps) {
             <h2 className="site-map__title">Филиалы</h2>
             <ul className="site-map__items">
               {responseBranches.map((branch) => (
-                <li key={branch.id_branch}>
+                <li key={branch.id}>
                   <NavLink href={branch.pageLink + '#top'} className="link">
                     {branch.city}
                   </NavLink>
@@ -110,7 +110,7 @@ export async function Footer({ branch }: IFooterProps) {
         {responseBranches.map(
           (branch) =>
             branch.city === targetBranch && (
-              <div className="footer__branch" key={branch.id_branch}>
+              <div className="footer__branch" key={branch.id}>
                 <div
                   className="branch__label footer__label"
                   aria-label="Местонахождение"
@@ -146,16 +146,17 @@ export async function Footer({ branch }: IFooterProps) {
           </p>
           <div className="law-data__politics">
             Продолжая использовать наш сайт, вы&nbsp;даете согласие
-            на&nbsp;обработку файлов{' '}
-            <Link href="#" className="link law-data__link">
+            на&nbsp;обработку файлов&nbsp;
+            <Link href={`${slash}terms`} className="link law-data__link">
               Cookies
-            </Link>{' '}
-            и&nbsp;других пользовательских данных, в соответствии с&nbsp;
-            <Link href="#" className="link law-data__link">
-              Политикой конфиденциальности
-            </Link>{' '}
+            </Link>
+            &nbsp;и&nbsp;других пользовательских данных, в&nbsp;соответствии
+            с&nbsp;
+            <Link href={`${slash}terms`} className="link law-data__link">
+              Политикой конфиденциальности&nbsp;
+            </Link>
             и&nbsp;
-            <Link href="#" className="link law-data__link">
+            <Link href={`${slash}terms`} className="link law-data__link">
               Пользовательским соглашением
             </Link>
           </div>
