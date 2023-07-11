@@ -1,5 +1,5 @@
 //################# LIBS #####################
-// import { getData } from '@/data/getData';
+import { getData } from '@/data/getData';
 
 //################ LAYOUT ####################
 import { Cover } from '@/components/cover/Cover';
@@ -9,32 +9,23 @@ import Contacts from '@/components/contacts/Contacts';
 
 //############## INTERFACE ###################
 import { IBranch, IBrand, IDirection } from '@/models';
-import { preBranch } from '@/data/branch';
-import { preDirections } from '@/data/directions';
-import { preBrands } from '@/data/brands';
 
 interface IPageDirectionsProps {
   branch: string;
 }
 
 export async function PageDirections({ branch }: IPageDirectionsProps) {
-  // const targetBranch = branch;
+  const responseBranches: IBranch[] = await getData({
+    page: 'Branches',
+    city: '*',
+  });
 
-  //!!!! пересобрать это бы через Promies.all
-  const responseBranches: IBranch[] = preBranch;
-  // (await getData({
-  //   page: 'Branches',
-  //   city: '*',
-  // })) || ;
+  const responseDirections: IDirection[] = await getData({
+    page: 'Directions',
+    city: branch,
+  });
 
-  const responseDirections: IDirection[] = preDirections;
-  // (await getData({
-  //   page: 'Directions',
-  //   city: targetBranch,
-  // })) || ;
-
-  const responseBrands: IBrand[] = preBrands;
-  // (await getData({ page: 'Brands' })) ||
+  const responseBrands: IBrand[] = await getData({ page: 'Brands' });
 
   // За один пробег делим направления на три группы
   // Находим id первого из комбинированных направлений
@@ -50,22 +41,21 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
     if (direction.combine) {
       combineBrands += direction.brands + '/';
 
-      if (!Number.isFinite(combineFirstIndex))
-        combineFirstIndex = direction.id_dir;
+      if (!Number.isFinite(combineFirstIndex)) combineFirstIndex = direction.id;
 
       combinePart.push(
         <Direction
           direction={direction}
           baseBrands={responseBrands}
-          key={direction.id_dir}
+          key={direction.id}
         />
       );
-    } else if (direction.id_dir > combineFirstIndex)
+    } else if (direction.id > combineFirstIndex)
       secondPart.push(
         <Direction
           direction={direction}
           baseBrands={responseBrands}
-          key={direction.id_dir}
+          key={direction.id}
         />
       );
     else
@@ -73,7 +63,7 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
         <Direction
           direction={direction}
           baseBrands={responseBrands}
-          key={direction.id_dir}
+          key={direction.id}
         />
       );
   });
@@ -101,7 +91,7 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
           {responseBrands?.map((el) =>
             targetBrands.map(
               (target) =>
-                el.title === target && <Brands brand={el} key={el.id_brand} />
+                el.title === target && <Brands brand={el} key={el.id} />
             )
           )}
         </ul>

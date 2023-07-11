@@ -2,7 +2,7 @@ import { IContact } from '../models';
 
 export const preContacts: IContact[] = [
   {
-    id_con: 1,
+    id: 1,
     title: 'Сухие строительные смеси',
     name: 'Сергей Герман',
     description: '',
@@ -14,7 +14,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 2,
+    id: 2,
     title: 'Потолочные системы и напольные покрытия',
     name: 'Роман Кусайкин',
     description: '',
@@ -26,7 +26,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 3,
+    id: 3,
     title: 'Лакокрасочные и декоративные покрытия',
     name: 'Ольга Богатырёва',
     description: '',
@@ -38,7 +38,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 4,
+    id: 4,
     title: 'Системы звукоизоляции',
     name: 'Александр Смирнов',
     description: '',
@@ -50,7 +50,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 5,
+    id: 5,
     title: 'Солнечные ​электростанции',
     name: 'Виталий Гришин',
     description: '',
@@ -62,7 +62,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 6,
+    id: 6,
     title: 'Тепловые станции',
     name: 'Александр Филлипов',
     description: '',
@@ -74,7 +74,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 7,
+    id: 7,
     title: 'Интернет-магазин MisterProf.ru',
     name: '',
     description: '',
@@ -86,7 +86,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 8,
+    id: 8,
     title: 'Отдел комплектации строительных объектов',
     name: '',
     description: '',
@@ -98,7 +98,7 @@ export const preContacts: IContact[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id_con: 9,
+    id: 9,
     title: 'Потолочные системы и напольные покрытия',
     name: 'Станислав Потоцкий',
     description: '',
@@ -110,7 +110,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 10,
+    id: 10,
     title: 'Лакокрасочные ​покрытия',
     name: 'Анна Козьмина',
     description: '',
@@ -122,7 +122,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 11,
+    id: 11,
     title: 'Системы звукоизоляции',
     name: 'Юрий Чернявский',
     description: '',
@@ -134,7 +134,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 12,
+    id: 12,
     title: 'Солнечные ​электростанции',
     name: 'Виталий Гришин',
     description: '',
@@ -146,7 +146,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 13,
+    id: 13,
     title: 'Тепловые станции',
     name: 'Александр Филлипов',
     description: '',
@@ -158,7 +158,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 14,
+    id: 14,
     title: 'Армировочные материалы',
     name: 'Станислав Губанов',
     description: '',
@@ -170,7 +170,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 15,
+    id: 15,
     title: 'Отдел комплектации строительных объектов',
     name: 'Павел Семенютин',
     description: '',
@@ -182,7 +182,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 16,
+    id: 16,
     title: 'Руководитель проекта «Современный дом»',
     name: 'Константин Салманов',
     description: '',
@@ -194,7 +194,7 @@ export const preContacts: IContact[] = [
     city: 'Краснодар',
   },
   {
-    id_con: 17,
+    id: 17,
     title: 'Потолочные системы и освещение',
     name: 'Павел Лагунов',
     description: '',
@@ -206,7 +206,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 18,
+    id: 18,
     title: 'Звукоизоляция помещений',
     name: 'Павел Лагунов',
     description: '',
@@ -218,7 +218,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 19,
+    id: 19,
     title: 'Лакокрасочные и декоративные покрытия',
     name: 'Роман Борщ',
     description: '',
@@ -230,7 +230,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 20,
+    id: 20,
     title: 'Напольные покрытия',
     name: 'Павел Лагунов',
     description: '',
@@ -242,7 +242,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 21,
+    id: 21,
     title: 'Солнечные ​электростанции',
     name: 'Виталий Гришин',
     description: '',
@@ -254,7 +254,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 22,
+    id: 22,
     title: 'Тепловые станции',
     name: 'Александр Филлипов',
     description: '',
@@ -266,7 +266,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 23,
+    id: 23,
     title: 'Системы утепления',
     name: 'Андрей Кухарский',
     description: '',
@@ -278,7 +278,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 24,
+    id: 24,
     title: 'Директор Вист-Ставрополь',
     name: 'Андрей Бобрышов',
     description: '',
@@ -290,7 +290,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 25,
+    id: 25,
     title: 'Отдел комплектации строительных объектов',
     name: 'Алексей Кравченко',
     description: '',
@@ -302,7 +302,7 @@ export const preContacts: IContact[] = [
     city: 'Ставрополь',
   },
   {
-    id_con: 26,
+    id: 26,
     title: 'Потолочные системы',
     name: 'Елена Герус',
     description: '',
@@ -314,7 +314,7 @@ export const preContacts: IContact[] = [
     city: 'Пятигорск',
   },
   {
-    id_con: 27,
+    id: 27,
     title: 'Лакокрасочные ​покрытия',
     name: 'Юлия Бадулина',
     description: '',
@@ -326,7 +326,7 @@ export const preContacts: IContact[] = [
     city: 'Пятигорск',
   },
   {
-    id_con: 28,
+    id: 28,
     title: 'Напольные покрытия',
     name: 'Дмитрий Булатов',
     description: '',
@@ -338,7 +338,7 @@ export const preContacts: IContact[] = [
     city: 'Пятигорск',
   },
   {
-    id_con: 29,
+    id: 29,
     title: 'Системы звукоизоляции',
     name: 'Дмитрий Булатов',
     description: '',
@@ -350,7 +350,7 @@ export const preContacts: IContact[] = [
     city: 'Пятигорск',
   },
   {
-    id_con: 30,
+    id: 30,
     title: 'Солнечные ​электростанции',
     name: 'Виталий Гришин',
     description: '',
@@ -362,7 +362,7 @@ export const preContacts: IContact[] = [
     city: 'Пятигорск',
   },
   {
-    id_con: 31,
+    id: 31,
     title: 'Тепловые станции',
     name: 'Александр Филлипов',
     description: '',
@@ -374,7 +374,7 @@ export const preContacts: IContact[] = [
     city: 'Пятигорск',
   },
   {
-    id_con: 32,
+    id: 32,
     title: 'Отдел комплектации строительных объектов',
     name: 'Кирилл Махоткин',
     description: '',
@@ -386,7 +386,7 @@ export const preContacts: IContact[] = [
     city: 'Пятигорск',
   },
   {
-    id_con: 33,
+    id: 33,
     title: 'Магазин «Профессионал»',
     name: '',
     description: '',
