@@ -146,16 +146,17 @@ export async function Footer({ branch }: IFooterProps) {
           </p>
           <div className="law-data__politics">
             Продолжая использовать наш сайт, вы&nbsp;даете согласие
-            на&nbsp;обработку файлов{' '}
-            <Link href="#" className="link law-data__link">
+            на&nbsp;обработку файлов&nbsp;
+            <Link href={`${slash}terms`} className="link law-data__link">
               Cookies
-            </Link>{' '}
-            и&nbsp;других пользовательских данных, в соответствии с&nbsp;
-            <Link href="#" className="link law-data__link">
-              Политикой конфиденциальности
-            </Link>{' '}
+            </Link>
+            &nbsp;и&nbsp;других пользовательских данных, в&nbsp;соответствии
+            с&nbsp;
+            <Link href={`${slash}terms`} className="link law-data__link">
+              Политикой конфиденциальности&nbsp;
+            </Link>
             и&nbsp;
-            <Link href="#" className="link law-data__link">
+            <Link href={`${slash}terms`} className="link law-data__link">
               Пользовательским соглашением
             </Link>
           </div>
