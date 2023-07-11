@@ -8,11 +8,18 @@
 @import url('./zero.css');
 @import url('./root.css');
 
+
 /* ######################################################################### */
 /* ######################### MAIN LAYOUT STYLES ############################ */
 /* ######################################################################### */
 
-@import url('../components/page/page.css');
+body {
+  min-width: 343px;
+  font-family: var(--font-family__p);
+  line-height: var(--line-height__p);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 @import url('../components/overlay/overlay.css');
 

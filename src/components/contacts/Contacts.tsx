@@ -1,5 +1,6 @@
 //################# LIBS ####################
 import { getData } from '@/data/getData';
+import { preContacts } from '@/data/contacts';
 
 //################ LAYOUT ###################
 import { Contact } from '../contact/Contact';
@@ -8,7 +9,6 @@ import { Contact } from '../contact/Contact';
 import { IContact } from '@/models';
 import { IContactsProps } from '.';
 import './Contacts.css';
-import { preContacts } from '@/data/contacts';
 
 export async function Contacts({ branch, response, key }: IContactsProps) {
   //
