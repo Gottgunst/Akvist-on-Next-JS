@@ -37,7 +37,7 @@ export default function Direction({ direction, baseBrands }: IDirectProps) {
             {baseBrands?.map((el) =>
               targetBrands.map(
                 (target) =>
-                  el.title == target && <Brands brand={el} key={el.id_brand} />
+                  el.title == target && <Brands brand={el} key={el.id} />
               )
             )}
           </ul>
@@ -55,7 +55,7 @@ export default function Direction({ direction, baseBrands }: IDirectProps) {
               targetBrands.map(
                 (target) =>
                   el.title == target && (
-                    <Brands brand={el} noImage={true} key={el.id_brand} />
+                    <Brands brand={el} noImage={true} key={el.id} />
                   )
               )
             )}

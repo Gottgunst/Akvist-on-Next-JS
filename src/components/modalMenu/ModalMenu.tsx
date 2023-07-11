@@ -81,7 +81,7 @@ export function ModalMenu({ branch, responseBranches }: IModalMenuProps) {
                 branch.city === targetBranch && (
                   <a
                     href={`tel:+${branch.phone}`}
-                    key={branch.id_branch}
+                    key={branch.id}
                     className="link"
                     target="_blank"
                     rel="noreferrer"
