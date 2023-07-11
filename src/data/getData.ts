@@ -9,10 +9,7 @@ interface INone {
   city?: string;
 }
 
-export async function getData({
-  page = 'none',
-  city = '*',
-}: IGetDataProps): any {
+export async function getData({ page = 'none', city = '*' }: IGetDataProps) {
   const base =
     'https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec';
 
