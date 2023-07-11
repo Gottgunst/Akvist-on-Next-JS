@@ -1,0 +1,42 @@
+.auditoria {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  grid-template-areas:
+    'image-1 image-1 text-1 text-1'
+    'text-2 text-2 image-3 image-2'
+    'text-3 text-3 image-3 image-4';
+  margin-bottom: 144px;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .auditoria {
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 80px repeat(3, auto);
+    grid-template-areas:
+      'text-1 text-1 image-2'
+      'image-1 image-1 image-2'
+      'image-1 image-1 image-4'
+      'image-3 text-2 text-2'
+      'image-3 text-3 text-3';
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .auditoria {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 320px auto);
+    grid-template-areas:
+      'image-1'
+      'text-1'
+      'image-2'
+      'text-2'
+      'image-3'
+      'text-3';
+  }
+}

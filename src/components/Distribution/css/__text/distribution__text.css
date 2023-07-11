@@ -1,0 +1,19 @@
+.distribution__text {
+  margin: 33px 0 0 0;
+  padding: 0;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .distribution__text {
+    max-width: 290px;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .distribution__text {
+    width: auto;
+    max-width: 450px;
+  }
+}

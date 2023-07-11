@@ -1,0 +1,22 @@
+.distribution__map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  grid-area: allin;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .distribution__map {
+    margin-left: 40%;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .distribution__map {
+    display: none;
+  }
+}

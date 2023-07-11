@@ -1,0 +1,19 @@
+.numbers__digit {
+  font-size: var(--font-size__h1);
+  line-height: var(--line-height__h1);
+  color: var(--color__accent_green);
+  white-space: nowrap;
+  position: relative;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .numbers__digit {}
+}
+
+@media screen and (max-width: 791px) {
+  .numbers__digit {
+    font-size: 50px;
+  }
+}

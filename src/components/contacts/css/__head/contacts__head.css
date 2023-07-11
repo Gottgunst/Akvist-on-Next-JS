@@ -1,0 +1,13 @@
+/* .contacts__head {} */
+
+/* --------------MEDIA--------------- */
+
+/* @media screen and (max-width: 1079px) {
+  .contacts__head {}
+} */
+
+@media screen and (max-width: 791px) {
+  .contacts__head {
+    text-align: center;
+  }
+}

@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 1079px) {
   .direction__description {
-    margin: 12px 0 42px;
+    margin-bottom: 42px;
     max-height: calc(100% - 202px);
     -webkit-line-clamp: 5;
   }
@@ -29,7 +29,7 @@
 
 @media screen and (max-width: 791px) {
   .direction__description {
-    margin: 12px 0 0;
+    margin: 0;
     max-height: fit-content;
     display: block;
   }

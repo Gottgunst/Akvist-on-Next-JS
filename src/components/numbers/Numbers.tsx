@@ -1,17 +1,23 @@
-export default function Numbers() {
+//################# LIBS ####################
+
+//################ LAYOUT ###################
+
+//########### INTERFACE & STYLES ##############
+import { INumbersProps } from '.';
+import './Numbers.css';
+
+export function Numbers({}: INumbersProps) {
   return (
-    <section className="section section_type_numbers">
-      <ul className="grid grid_type_numbers">
+    <section className="section numbers">
+      <ul className="grid numbers__grid">
         <li>
-          <h2 className="section__title numbers__digit" data-above="more">
-            250
-          </h2>
+          <p className="numbers__above">более</p>
+          <h2 className="section__title numbers__digit">250</h2>
           <p className="section__text numbers__caption">сотрудников компании</p>
         </li>
         <li>
-          <h2 className="section__title numbers__digit" data-above="more">
-            10 000
-          </h2>
+          <p className="numbers__above">более</p>
+          <h2 className="section__title numbers__digit">10 000</h2>
           <p className="section__text numbers__caption">
             реализованных проектов
           </p>
@@ -21,12 +27,13 @@ export default function Numbers() {
           <p className="section__text numbers__caption">года работы</p>
         </li>
         <li>
-          <h2 className="section__title numbers__digit" data-above="more">
-            30
-          </h2>
+          <p className="numbers__above">более</p>
+          <h2 className="section__title numbers__digit">30</h2>
           <p className="section__text numbers__caption">брендов</p>
         </li>
       </ul>
     </section>
   );
 }
+
+export default Numbers as unknown as (props: INumbersProps) => JSX.Element;
