@@ -3,10 +3,11 @@
 //################ LAYOUT ###################
 
 //########### INTERFACE & STYLES ##############
-import { IServiceProps } from '.';
+// import { IServiceProps } from '.';
 import './Service.css';
 
-export function Service({}: IServiceProps) {
+export function Service() {
+  //{}: IServiceProps) {
   return (
     <section className="section" id="service">
       <h2 className="section__title service__title">Сервис</h2>
@@ -86,4 +87,4 @@ export function Service({}: IServiceProps) {
   );
 }
 
-export default Service as unknown as (props: IServiceProps) => JSX.Element;
+export default Service; // as unknown as (props: IServiceProps) => JSX.Element;

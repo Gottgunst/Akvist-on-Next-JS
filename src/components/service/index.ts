@@ -1,2 +1,2 @@
 export * from './Service';
-export * from './IService.props';
+// export * from './IService.props';

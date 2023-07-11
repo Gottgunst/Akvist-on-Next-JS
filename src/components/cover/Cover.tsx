@@ -1,5 +1,3 @@
-import { Quote } from '../quote/Quote';
-
 export function Cover() {
   //## TO-DO ## блок для создания стиля с персональной фоновой картинкой взятой из БД
 

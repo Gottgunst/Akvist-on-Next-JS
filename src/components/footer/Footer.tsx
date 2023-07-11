@@ -111,14 +111,14 @@ export async function Footer({ branch }: IFooterProps) {
           (branch) =>
             branch.city === targetBranch && (
               <div className="footer__branch" key={branch.id_branch}>
-                <p
+                <div
                   className="branch__label footer__label"
                   aria-label="Местонахождение"
                 >
                   {branch.address}
 
                   {branch.address_second && <p>{branch.address_second}</p>}
-                </p>
+                </div>
 
                 <p
                   className="branch__label footer__label"
@@ -144,7 +144,7 @@ export async function Footer({ branch }: IFooterProps) {
           <p className="law-data__copyright">
             © {new Date().getFullYear()} ООО «Вист»
           </p>
-          <p className="law-data__politics">
+          <div className="law-data__politics">
             Продолжая использовать наш сайт, вы&nbsp;даете согласие
             на&nbsp;обработку файлов{' '}
             <Link href="#" className="link law-data__link">
@@ -158,7 +158,7 @@ export async function Footer({ branch }: IFooterProps) {
             <Link href="#" className="link law-data__link">
               Пользовательским соглашением
             </Link>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

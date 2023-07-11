@@ -1,3 +1,3 @@
-export interface IDistributionProps{
+// export interface IDistributionProps{
 
-}
+// }
