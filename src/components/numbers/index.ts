@@ -1,2 +1,2 @@
 export * from './Numbers';
-export * from './INumbers.props';
+// export * from './INumbers.props';

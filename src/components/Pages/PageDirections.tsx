@@ -1,5 +1,5 @@
 //################# LIBS #####################
-import { getData } from '@/data/getData';
+// import { getData } from '@/data/getData';
 
 //################ LAYOUT ####################
 import { Cover } from '@/components/cover/Cover';
@@ -8,29 +8,33 @@ import Brands from '@/components/brands/Brands';
 import Contacts from '@/components/contacts/Contacts';
 
 //############## INTERFACE ###################
-import { IBranch, IBrand, IContact, IDirection } from '@/models';
+import { IBranch, IBrand, IDirection } from '@/models';
+import { preBranch } from '@/data/branch';
+import { preDirections } from '@/data/directions';
+import { preBrands } from '@/data/brands';
 
 interface IPageDirectionsProps {
   branch: string;
 }
 
 export async function PageDirections({ branch }: IPageDirectionsProps) {
-  const targetBranch = branch;
+  // const targetBranch = branch;
 
   //!!!! пересобрать это бы через Promies.all
-  const responseContacts: IContact[] = await getData({
-    page: 'Contacts',
-    city: targetBranch,
-  });
-  const responseBranches: IBranch[] = await getData({
-    page: 'Branches',
-    city: '*',
-  });
-  const responseDirections: IDirection[] = await getData({
-    page: 'Directions',
-    city: targetBranch,
-  });
-  const responseBrands: IBrand[] = await getData({ page: 'Brands' });
+  const responseBranches: IBranch[] = preBranch;
+  // (await getData({
+  //   page: 'Branches',
+  //   city: '*',
+  // })) || ;
+
+  const responseDirections: IDirection[] = preDirections;
+  // (await getData({
+  //   page: 'Directions',
+  //   city: targetBranch,
+  // })) || ;
+
+  const responseBrands: IBrand[] = preBrands;
+  // (await getData({ page: 'Brands' })) ||
 
   // За один пробег делим направления на три группы
   // Находим id первого из комбинированных направлений
@@ -106,18 +110,12 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
       <section className="section section_type_directions">
         {secondPart}
       </section>
-      <section className="section section_type_contacts" id="Contacts">
-        {responseBranches.map(
-          (branch, index) =>
-            branch.city === targetBranch && (
-              <Contacts
-                contacts={responseContacts}
-                branch={branch}
-                key={index}
-              />
-            )
-        )}
-      </section>
+      {responseBranches.map(
+        (el, index) =>
+          el.city === branch && (
+            <Contacts branch={branch} response={el} key={index} />
+          )
+      )}
     </>
   );
 }

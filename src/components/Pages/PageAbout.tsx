@@ -1,23 +1,25 @@
 //################# LIBS #####################
-import { getData } from '@/data/getData';
+// import { getData } from '@/data/getData';
 
 //################ LAYOUT ####################
 import Service from '@/components/service/Service';
 import Numbers from '@/components/numbers/Numbers';
 import Contacts from '@/components/contacts/Contacts';
 import Distribution from '@/components/Distribution/Distribution';
-import { IBranch, IContact } from '@/models';
+import { IBranch } from '@/models';
 import { Auditoria } from '@/components/Auditoria';
+import { preBranch } from '@/data/branch';
 
 interface IPageAboutProps {
   branch: string;
 }
 
 export async function PageAbout({ branch }: IPageAboutProps) {
-  const responseBranches: IBranch[] = await getData({
-    page: 'Branches',
-    city: '*',
-  });
+  const responseBranches: IBranch[] = preBranch;
+  // (await getData({
+  //   page: 'Branches',
+  //   city: '*',
+  // }));
 
   return (
     <>

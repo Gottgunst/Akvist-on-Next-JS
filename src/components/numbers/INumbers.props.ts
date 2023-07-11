@@ -1,3 +1,3 @@
-export interface INumbersProps{
+// export interface INumbersProps{
 
-}
+// }

@@ -3,10 +3,11 @@
 //################ LAYOUT ###################
 
 //########### INTERFACE & STYLES ##############
-import { INumbersProps } from '.';
+// import { INumbersProps } from '.';
 import './Numbers.css';
 
-export function Numbers({}: INumbersProps) {
+export function Numbers() {
+  //{}: INumbersProps) {
   return (
     <section className="section numbers">
       <ul className="grid numbers__grid">
@@ -36,4 +37,4 @@ export function Numbers({}: INumbersProps) {
   );
 }
 
-export default Numbers as unknown as (props: INumbersProps) => JSX.Element;
+export default Numbers; // as unknown as (props: INumbersProps) => JSX.Element;

@@ -17,7 +17,7 @@ interface ISelectProps {
 
 export function Select({ branch, rBranches, className }: ISelectProps) {
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
 
   const changeCity = (evt: any) => {
     const target = getSlash(evt.target.value);
