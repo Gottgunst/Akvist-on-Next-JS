@@ -1,8 +1,5 @@
 .header-compensation {
-  margin: 0;
-  padding: 0;
-  height: 95px;
-  border: 0;
-  margin-block: 0;
-  margin-inline: 0;
+  height: 100px;
+  border-bottom: 1.5px solid;
+  border-color: var(--color__accent_green);
 }

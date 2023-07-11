@@ -1,0 +1,21 @@
+.distribution__about {
+  width: 460px;
+  grid-area: allin;
+  z-index: 2;
+  justify-self: end;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .distribution__about {
+    justify-self: start;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .distribution__about {
+    width: auto;
+    max-width: 540px;
+  }
+}

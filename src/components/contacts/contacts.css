@@ -1,20 +1,4 @@
-.contacts{
-  padding: 100px 0 0;
-  box-sizing:  border-box;
-  max-width: 940px;
-  margin: 0 auto;
-
-}
-/* --------------MEDIA--------------- */
-
-@media screen and (max-width: 1079px) {
-  .contacts {
-    padding: 88px var(--padding__section) 0;
-  }
-}
-
-@media screen and (max-width: 791px) {
-  .contacts {
-    padding: 60px var(--padding__section) 0;
-  }
-}
+@import url('./css/contacts.css');
+@import url('./css/__wrapper/contacts__wrapper.css');
+@import url('./css/__head/contacts__head.css');
+@import url('./css/__grid/contacts__grid.css');

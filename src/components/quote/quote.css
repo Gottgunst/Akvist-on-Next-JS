@@ -8,6 +8,8 @@
   font-size: var(--font-size__quote);
   line-height: var(--line-height__quote);
   font-weight: var(--font-weight__medium);
+
+  container-type: inline-size;
 }
 
 .quote::before {

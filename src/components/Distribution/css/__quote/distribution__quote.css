@@ -1,0 +1,24 @@
+.distribution__quote {
+  margin: 100px 0 0;
+  padding: 50px 0 0;
+  box-sizing: border-box;
+}
+
+/* --------------MEDIA--------------- */
+
+@media screen and (max-width: 1079px) {
+  .distribution__quote {
+    margin: 75px 0 0;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .distribution__quote {
+    margin: 50px 0 0;
+    padding: 50px 0 0;
+  }
+
+  .distribution__quote::before {
+    top: 40px;
+  }
+}
