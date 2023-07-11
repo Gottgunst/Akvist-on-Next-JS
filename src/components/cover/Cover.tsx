@@ -13,7 +13,11 @@ export function Cover() {
         </div>
       </section>
       <section className="welcome">
-        <Quote />
+        <blockquote className="quote">
+          Мы специализируемся на поставке отделочных материалов, солнечных
+          батарей и коллекторов, оборудования для горячего водоснабжения и
+          отопления.
+        </blockquote>
       </section>
     </>
   );

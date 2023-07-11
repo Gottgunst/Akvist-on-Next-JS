@@ -14,14 +14,10 @@ interface IPageAboutProps {
 }
 
 export async function PageAbout({ branch }: IPageAboutProps) {
-  // const responseContacts: IContact[] = await getData({
-  //   page: 'Contacts',
-  //   city: branch,
-  // });
-  // const responseBranches: IBranch[] = await getData({
-  //   page: 'Branches',
-  //   city: '*',
-  // });
+  const responseBranches: IBranch[] = await getData({
+    page: 'Branches',
+    city: '*',
+  });
 
   return (
     <>
@@ -37,7 +33,12 @@ export async function PageAbout({ branch }: IPageAboutProps) {
 
       <Service />
 
-      <Contacts branch={branch} />
+      {responseBranches.map(
+        (el, index) =>
+          el.city === branch && (
+            <Contacts branch={branch} response={el} key={index} />
+          )
+      )}
     </>
   );
 }
