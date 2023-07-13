@@ -1,18 +1,27 @@
 .button {
-  height: 48px;
   min-width: 169px;
   max-width: 300px;
-  border-radius: var(--border-radius__small);
+  height: 48px;
   padding: 12px 40px 12px 40px;
   border: 1px solid var(--color__accent_green);
+  border-radius: var(--border-radius__small);
+
+  color: var(--color__accent_green);
   background-color: inherit;
+  overflow: hidden;
 
   font-family: var(--font-family__main);
+  font-weight: var(--font-weight__medium);
   font-size: var(--font-size__p);
   line-height: var(--line-height__p);
-  font-weight: var(--font-weight__medium);
-
   text-overflow: ellipsis;
+  transition: background-color .3s ease, color .3s ease;
+  cursor: pointer;
   white-space: nowrap;
-  overflow: hidden;
+}
+
+
+.button:hover {
+  color: var(--color__bg_white);
+  background-color: var(--color__accent_green);
 }
