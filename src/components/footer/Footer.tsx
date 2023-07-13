@@ -2,7 +2,7 @@
 import { getData } from '@/data/getData';
 import Link from 'next/link';
 import NavLink from '../navlink/NavLink';
-import { getSlash } from '@/context/targetBranch';
+import { getSlash } from '@/util/targetBranch';
 import { IBranch, IDirection } from '@/models';
 
 //############## INTERFACE ###################
@@ -25,23 +25,23 @@ export async function Footer({ branch }: IFooterProps) {
   const slash = getSlash(branch);
 
   return (
-    <footer className="footer">
-      <div className="section section_type_footer">
-        <nav className="site-map">
+    <footer className='footer'>
+      <div className='section section_type_footer'>
+        <nav className='site-map'>
           {/* дважды иду по одному и тому же циклу, нужно переписать ↓↓↓ */}
 
           {responseDirections.length > 0 && (
-            <div className="site-map__block" aria-label="Блок 1">
-              <h2 className="site-map__title">Решения</h2>
+            <div className='site-map__block' aria-label='Блок 1'>
+              <h2 className='site-map__title'>Решения</h2>
 
-              <ul className="site-map__items">
+              <ul className='site-map__items'>
                 {responseDirections.map(
                   (direction) =>
                     !direction.combine && (
                       <li key={direction.id}>
                         <a
                           href={slash.slice(0, -1) + '#' + direction.pageLink}
-                          className="link site-map__link"
+                          className='link site-map__link'
                         >
                           {direction.title}
                         </a>
@@ -56,18 +56,18 @@ export async function Footer({ branch }: IFooterProps) {
 
           {responseDirections.length > 0 &&
             responseDirections.filter((direction) => direction.combine) && (
-              <div className="site-map__block" aria-label="Блок 2">
-                <h2 className="site-map__title">
+              <div className='site-map__block' aria-label='Блок 2'>
+                <h2 className='site-map__title'>
                   Строительно-отделочные материалы
                 </h2>
-                <ul className="site-map__items">
+                <ul className='site-map__items'>
                   {responseDirections.map(
                     (direction) =>
                       direction.combine && (
                         <li key={direction.id}>
                           <a
                             href={slash.slice(0, -1) + '#' + direction.pageLink}
-                            className="link"
+                            className='link'
                           >
                             {direction.title}
                           </a>
@@ -78,28 +78,28 @@ export async function Footer({ branch }: IFooterProps) {
               </div>
             )}
 
-          <div className="site-map__block" aria-label="Блок 3">
-            <h2 className="site-map__title">Филиалы</h2>
-            <ul className="site-map__items">
+          <div className='site-map__block' aria-label='Блок 3'>
+            <h2 className='site-map__title'>Филиалы</h2>
+            <ul className='site-map__items'>
               {responseBranches.map((branch) => (
                 <li key={branch.id}>
-                  <NavLink href={branch.pageLink + '#top'} className="link">
+                  <NavLink href={branch.pageLink + '#top'} className='link'>
                     {branch.city}
                   </NavLink>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="site-map__block" aria-label="Блок 4">
-            <h2 className="site-map__title">О компании</h2>
-            <ul className="site-map__items">
+          <div className='site-map__block' aria-label='Блок 4'>
+            <h2 className='site-map__title'>О компании</h2>
+            <ul className='site-map__items'>
               <li>
-                <NavLink href={`${slash}about`} className="link">
+                <NavLink href={`${slash}about`} className='link'>
                   О нас
                 </NavLink>
               </li>
               <li>
-                <NavLink href={`${slash}about/#service`} className="link">
+                <NavLink href={`${slash}about/#service`} className='link'>
                   Сервис
                 </NavLink>
               </li>
@@ -110,10 +110,10 @@ export async function Footer({ branch }: IFooterProps) {
         {responseBranches.map(
           (branch) =>
             branch.city === targetBranch && (
-              <div className="footer__branch" key={branch.id}>
+              <div className='footer__branch' key={branch.id}>
                 <div
-                  className="branch__label footer__label"
-                  aria-label="Местонахождение"
+                  className='branch__label footer__label'
+                  aria-label='Местонахождение'
                 >
                   {branch.address}
 
@@ -121,17 +121,17 @@ export async function Footer({ branch }: IFooterProps) {
                 </div>
 
                 <p
-                  className="branch__label footer__label"
-                  aria-label="Расписание"
+                  className='branch__label footer__label'
+                  aria-label='Расписание'
                 >
                   {branch.schedule}
                 </p>
 
                 <p
-                  className="branch__label footer__label footer__phone"
-                  aria-label="Телефон"
+                  className='branch__label footer__label footer__phone'
+                  aria-label='Телефон'
                 >
-                  <a href={`tel:+${branch.phone}`} className="link">
+                  <a href={`tel:+${branch.phone}`} className='link'>
                     +{branch.phone}
                   </a>
                 </p>
@@ -139,24 +139,24 @@ export async function Footer({ branch }: IFooterProps) {
             )
         )}
 
-        <div className="law-data">
-          <div className="logo law-data__logo"></div>
-          <p className="law-data__copyright">
+        <div className='law-data'>
+          <div className='logo law-data__logo'></div>
+          <p className='law-data__copyright'>
             © {new Date().getFullYear()} ООО «Вист»
           </p>
-          <div className="law-data__politics">
+          <div className='law-data__politics'>
             Продолжая использовать наш сайт, вы&nbsp;даете согласие
             на&nbsp;обработку файлов&nbsp;
-            <Link href={`${slash}terms`} className="link law-data__link">
+            <Link href={`${slash}terms`} className='link law-data__link'>
               Cookies
             </Link>
             &nbsp;и&nbsp;других пользовательских данных, в&nbsp;соответствии
             с&nbsp;
-            <Link href={`${slash}terms`} className="link law-data__link">
+            <Link href={`${slash}terms`} className='link law-data__link'>
               Политикой конфиденциальности&nbsp;
             </Link>
             и&nbsp;
-            <Link href={`${slash}terms`} className="link law-data__link">
+            <Link href={`${slash}terms`} className='link law-data__link'>
               Пользовательским соглашением
             </Link>
           </div>

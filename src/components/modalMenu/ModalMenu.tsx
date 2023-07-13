@@ -1,10 +1,11 @@
 'use client';
-// //################# LIBS ####################
+//################# LIBS ####################
 import { useState } from 'react';
-// import { motion } from 'framer-motion';
-import { getSlash } from '@/context/targetBranch';
+import { motion } from 'framer-motion';
+import { getSlash } from '@/util/targetBranch';
+import useMediaQuery from '@/util/useMediaQuery';
 
-// //################ LAYOUT ###################
+//################ LAYOUT ###################
 import Select from '../select/Select';
 import NavLink from '../navlink/NavLink';
 
@@ -22,27 +23,53 @@ export function ModalMenu({ branch, responseBranches }: IModalMenuProps) {
     setActive(active === 'no' ? 'yes' : 'no');
   };
 
+  const isSmall = useMediaQuery('(min-width: 791px)');
+
+  const variants = isSmall
+    ? {
+        open: { top: 0, right: 0 },
+        close: { top: -188, right: 0 },
+      }
+    : {
+        open: { right: 0, top: 0 },
+        close: { right: -280, top: 0 },
+      };
+
   return (
     <>
-      <button
-        className={
-          {
-            yes: 'header__menu-button header__menu-button_hidden',
-            no: 'header__menu-button',
-          }[active]
+      <motion.button
+        className='header__menu-button'
+        animate={
+          active === 'no'
+            ? { opacity: 1, visibility: 'visible' }
+            : { opacity: 0, visibility: 'hidden' }
         }
         onClick={toggleMenu}
-      ></button>
-      <nav
-        className={
-          {
-            yes: 'modal-menu modal-menu_opened',
-            no: 'modal-menu',
-          }[active]
+      ></motion.button>
+      <motion.nav
+        initial={{ visibility: 'hidden' }}
+        className='modal-menu'
+        layout
+        onMouseDown={toggleMenu}
+        animate={
+          active === 'yes'
+            ? {
+                opacity: 1,
+                visibility: 'visible',
+                transition: {
+                  delayChildren: 2.5,
+                },
+              }
+            : { opacity: 0, visibility: 'hidden' }
         }
-        onClick={toggleMenu}
       >
-        <div className='modal-menu__block'>
+        <motion.div
+          initial={'close'}
+          className='modal-menu__block'
+          onMouseDown={(evt) => evt.stopPropagation()}
+          animate={active === 'yes' ? 'open' : 'close'}
+          variants={variants}
+        >
           <div className='modal-menu__section'>
             <a href={slash}>
               <div className='logo modal-menu__logo'></div>
@@ -54,22 +81,22 @@ export function ModalMenu({ branch, responseBranches }: IModalMenuProps) {
             ></Select>
           </div>
           <ul className='modal-menu__links'>
-            <li>
+            <li onClick={toggleMenu}>
               <NavLink href={slash} className='link modal-menu__link'>
                 Продукты
               </NavLink>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <NavLink href={`${slash}about`} className='link modal-menu__link'>
                 О компании
               </NavLink>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <a href={`#Contacts`} className='link modal-menu__link'>
                 Интернет-магазин
               </a>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <a href={`#Contacts`} className='link modal-menu__link'>
                 Контакты
               </a>
@@ -85,14 +112,15 @@ export function ModalMenu({ branch, responseBranches }: IModalMenuProps) {
                     className='link'
                     target='_blank'
                     rel='noreferrer'
+                    onClick={toggleMenu}
                   >
                     +{branch.phone}
                   </a>
                 )
             )}
           </div>
-        </div>
-      </nav>
+        </motion.div>
+      </motion.nav>
     </>
   );
 }

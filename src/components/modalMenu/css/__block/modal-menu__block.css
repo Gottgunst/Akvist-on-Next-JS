@@ -1,10 +1,10 @@
 .modal-menu__block {
-  height: 188px;
   position: relative;
   box-sizing: border-box;
 
-  background: linear-gradient(171deg, #177C1B 0%, #16751A 100%), #177C1B;
   box-shadow: 0px 4px 68px 0px rgba(0, 0, 0, 0.55);
+
+  background: linear-gradient(171deg, #177C1B 0%, #16751A 100%), #177C1B;
   overflow: hidden;
 
 }
@@ -13,18 +13,19 @@
 
 @media screen and (max-width: 1079px) {
   .modal-menu__block {
-    width: auto;
     display: grid;
+    width: auto;
+    height: 188px;
 
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 66px;
     grid-template-areas:
       'logo'
       'menu';
 
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 66px;
-
-    margin-left: calc(var(--padding__section)/2);
     margin-right: calc(var(--padding__section)/2);
+    margin-left: calc(var(--padding__section)/2);
 
     border-radius: 0px 0px 8px 8px;
   }
@@ -34,13 +35,13 @@
   .modal-menu__block {
     width: 280px;
     height: calc(100vh - var(--padding__section)*2);
-
-    float: right;
+    grid-template-rows: 74px 1fr 64px;
     grid-template-areas:
       'logo'
       'menu'
       'phone';
-    grid-template-rows: 74px 1fr 64px;
+
+    float: right;
 
     margin: var(--padding__section) 0;
 
