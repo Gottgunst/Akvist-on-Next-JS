@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 //################ LAYOUT ####################
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
-import getTarget from '@/context/targetBranch';
+import getTarget from '@/util/targetBranch';
 
 export default function RostovNaDonu({
   children,

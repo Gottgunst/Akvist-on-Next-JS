@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { getSlash } from '@/context/targetBranch';
+import { getSlash } from '@/util/targetBranch';
 import { usePathname } from 'next/navigation';
 //################# LIBS #####################
 

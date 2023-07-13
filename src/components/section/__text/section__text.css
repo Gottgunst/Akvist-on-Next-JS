@@ -5,7 +5,7 @@
   color: var(--color__text_p);
 
   display: -webkit-box;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 
   padding-top: 12px;
