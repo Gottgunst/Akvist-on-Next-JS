@@ -40,8 +40,13 @@ export function Select({ branch, rBranches, className }: ISelectProps) {
 
   return (
     <select className={className} value={branch} onChange={changeCity}>
-      {rBranches.map((branch, index) => (
-        <option className="header__city" value={branch.city} key={index}>
+      {rBranches.map((branch) => (
+        <option
+          className='header__city'
+          value={branch.city}
+          key={branch.id}
+          id={branch.id}
+        >
           {branch.city}
         </option>
       ))}

@@ -1,0 +1,5 @@
+.fold-div__content {
+  grid-area: Content;
+  display: block;
+  padding-right: 60px;
+}

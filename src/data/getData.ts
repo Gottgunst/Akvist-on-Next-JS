@@ -11,18 +11,17 @@ interface INone {
 
 export async function getData({ page = 'none', city = '*' }: IGetDataProps) {
   const base =
-    'https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec';
+    'https://script.google.com/macros/s/AKfycbzFH9ZmURjylhjtfrB995JlujlpHYlJSJuH69zqItGn9BdEgM7eV7AWo4x2hR_tOgR6/exec';
 
-  let url: string = page ? base + '?page=' + page : base;
-  url = city ? url + '&city=' + city : url;
+  const url: string = base + '?page=' + page + '&city=' + city;
 
   try {
     const response = await fetch(url);
 
-    const good = await response.json();
+    // const good = await response.json();
 
     // if (good) {
-    return good;
+    return response.json();
     // } else {
     //   throw good;
     // }
@@ -70,10 +69,10 @@ export async function getData({ page = 'none', city = '*' }: IGetDataProps) {
   // });
 }
 
-// https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec?page=Directions&city=*
+// https://script.google.com/macros/s/AKfycbzFH9ZmURjylhjtfrB995JlujlpHYlJSJuH69zqItGn9BdEgM7eV7AWo4x2hR_tOgR6/exec?page=Directions&city=*
 
-// https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec?page=Branches&city=*
+// https://script.google.com/macros/s/AKfycbzFH9ZmURjylhjtfrB995JlujlpHYlJSJuH69zqItGn9BdEgM7eV7AWo4x2hR_tOgR6/exec?page=Branches&city=*
 
-// https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec?page=Contacts&city=*
+// https://script.google.com/macros/s/AKfycbzFH9ZmURjylhjtfrB995JlujlpHYlJSJuH69zqItGn9BdEgM7eV7AWo4x2hR_tOgR6/exec?page=Contacts&city=*
 
-// https://script.google.com/macros/s/AKfycbypu3-sj7VlCJnixJyTxmdhBDdzo-9KWHzKKLYcRLlp_6HJ5aLkFCF3tEe6zgOfpGYb/exec?page=Brands&city=*
+// https://script.google.com/macros/s/AKfycbzFH9ZmURjylhjtfrB995JlujlpHYlJSJuH69zqItGn9BdEgM7eV7AWo4x2hR_tOgR6/exec?page=Brands&city=*
