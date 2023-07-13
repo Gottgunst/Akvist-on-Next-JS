@@ -1,0 +1,18 @@
+.fold-div {
+  display: grid;
+  grid-template-columns: auto 40px;
+  grid-template-rows: min-content auto;
+  grid-template-areas:
+    "Title Button"
+    "Content Content";
+  align-items: center;
+  border-top: 1.5px solid var(--color__accent_green);
+  margin: 20px auto;
+  padding: 20px 0 0;
+}
+
+.fold-div:last-of-type {
+  border-bottom: 1.5px solid var(--color__accent_green);
+  padding-bottom: 20px;
+  margin-bottom: 80px;
+}

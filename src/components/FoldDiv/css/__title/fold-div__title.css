@@ -1,0 +1,10 @@
+.fold-div__title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-area: Title;
+  font-family: var(--font-family__h);
+  font-size: var(--font-size__h3);
+  cursor: pointer;
+  user-select: none;
+}
