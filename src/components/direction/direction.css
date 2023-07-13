@@ -1,73 +1,13 @@
-.direction {
-  display: flex;
-  max-width: 940px;
-  width: 100%;
-  height: 332px;
-  gap: 68px;
-  justify-content: flex-start;
-  position: relative;
-  margin-bottom: 56px;
-}
-
-.direction:nth-of-type(2n) {
-  flex-direction: row-reverse;
-}
-
-
-
-/* --------------MEDIA--------------- */
-
-@media screen and (max-width: 1079px) {
-  .direction {
-    height: 320px;
-    box-sizing: border-box;
-    max-width: 100%;
-    gap:56px;
-    padding: 0 var(--padding__section) 0 0;
-    margin: 0;
-  }
-
-  .direction:nth-of-type(2n) {
-    padding: 0 0 0 var(--padding__section);
-  }
-}
-
-@media screen and (max-width: 791px) {
-  .direction {
-    display: block;
-    height: auto;
-    padding: 0;
-  }
-
-  .direction:nth-of-type(2n) {
-    padding: 0;
-  }
-}
-
-
-
-
-/*----------------------------------*/
-
-.de-accent .direction_column {
-  width: 380px;
-  margin: 0;
-  justify-content: flex-start;
-}
-
-.de-accent .direction__img {
-  width: 300px;
-  height: 108px;
-}
-
-.de-accent .direction__texts {
-  width: inherit;
-}
-
-.de-accent .direction__brands {
-  display: none;
-}
-
-.de-accent .direction__button {
-  margin: 44px 0 0;
-}
+@import url('./css/direction.css');
+@import url('./css/_column/direction_column.css');
+@import url('./css/__images/direction__images.css');
+@import url('./css/__link/direction__link.css');
+@import url('./css/__img/direction__img.css');
+@import url('./css/__brands/direction__brands.css');
+@import url('./css/__brands-li/direction__brands-li.css');
+@import url('./css/__brands-name/direction__brands-name.css');
+@import url('./css/__brand/direction__brand.css');
+@import url('./css/__texts/direction__texts.css');
+/* @import url('./css/__header/direction__header.css'); */
+@import url('./css/__description/direction__description.css');
+@import url('./css/__button/direction__button.css');

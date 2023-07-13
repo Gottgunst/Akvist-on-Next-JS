@@ -1,5 +1,5 @@
 export interface IDirection {
-  id: number;
+  id: string;
   title: string;
   description: string;
   buttonText: string;
@@ -12,7 +12,7 @@ export interface IDirection {
 }
 
 export interface IBrand {
-  id: number;
+  id: string;
   title: string;
   description?: string;
   image: string;
@@ -22,7 +22,7 @@ export interface IBrand {
 }
 
 export interface IContact {
-  id: number;
+  id: string;
   title: string;
   name?: string;
   description?: string;
@@ -35,7 +35,7 @@ export interface IContact {
 }
 
 export interface IBranch {
-  id: number;
+  id: string;
   title: string;
   address: string;
   address_second?: string;

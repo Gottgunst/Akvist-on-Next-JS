@@ -3,7 +3,7 @@ import { getData } from '@/data/getData';
 
 //################ LAYOUT ####################
 import { Cover } from '@/components/cover/Cover';
-import Direction from '@/components/direction/Direction';
+import { Direction } from '@/components/Direction/Direction';
 import Brands from '@/components/brands/Brands';
 import Contacts from '@/components/contacts/Contacts';
 
@@ -34,14 +34,14 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
   const firstPart: JSX.Element[] = [];
   const combinePart: JSX.Element[] = [];
   const secondPart: JSX.Element[] = [];
-  let combineFirstIndex = Infinity;
+  let combineLastIndex = Infinity;
   let combineBrands = '';
 
-  responseDirections.map((direction) => {
+  responseDirections.map((direction, index) => {
     if (direction.combine) {
       combineBrands += direction.brands + '/';
 
-      if (!Number.isFinite(combineFirstIndex)) combineFirstIndex = direction.id;
+      combineLastIndex = index;
 
       combinePart.push(
         <Direction
@@ -50,7 +50,7 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
           key={direction.id}
         />
       );
-    } else if (direction.id > combineFirstIndex)
+    } else if (index > combineLastIndex)
       secondPart.push(
         <Direction
           direction={direction}
@@ -78,16 +78,16 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
   return (
     <>
       <Cover />
-      <section className="section section_type_directions" id="Directions">
+      <section className='section section_type_directions' id='Directions'>
         {firstPart}
       </section>
 
-      <section className="section section_background_grey section_type_two-columns">
+      <section className='section section_background_grey section_type_two-columns'>
         {combinePart}
       </section>
 
-      <section className="section section_type_brands-grid">
-        <ul className="grid">
+      <section className='section section_type_brands-grid'>
+        <ul className='grid'>
           {responseBrands?.map((el) =>
             targetBrands.map(
               (target) =>
@@ -97,7 +97,7 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
         </ul>
       </section>
 
-      <section className="section section_type_directions">
+      <section className='section section_type_directions'>
         {secondPart}
       </section>
       {responseBranches.map(
@@ -109,6 +109,6 @@ export async function PageDirections({ branch }: IPageDirectionsProps) {
     </>
   );
 }
-export default PageDirections as unknown as ({
-  branch,
-}: IPageDirectionsProps) => JSX.Element;
+export default PageDirections as unknown as (
+  props: IPageDirectionsProps
+) => JSX.Element;

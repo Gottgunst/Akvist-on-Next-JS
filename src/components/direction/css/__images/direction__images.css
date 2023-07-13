@@ -10,6 +10,8 @@
 
 .section_type_two-columns .direction__images {
   height: 108px;
+  max-width: 300px;
+  border-bottom: 1.5px solid var(--color__accent_green);
 }
 
 /* --------------MEDIA--------------- */

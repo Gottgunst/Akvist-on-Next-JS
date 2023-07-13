@@ -42,49 +42,49 @@ export function ModalMenu({ branch, responseBranches }: IModalMenuProps) {
         }
         onClick={toggleMenu}
       >
-        <div className="modal-menu__block">
-          <div className="modal-menu__section">
+        <div className='modal-menu__block'>
+          <div className='modal-menu__section'>
             <a href={slash}>
-              <div className="logo modal-menu__logo"></div>
+              <div className='logo modal-menu__logo'></div>
             </a>
             <Select
               branch={branch}
               rBranches={responseBranches}
-              className="header__select modal-menu__select"
+              className='header__select modal-menu__select'
             ></Select>
           </div>
-          <ul className="modal-menu__links">
+          <ul className='modal-menu__links'>
             <li>
-              <NavLink href={slash} className="link modal-menu__link">
+              <NavLink href={slash} className='link modal-menu__link'>
                 Продукты
               </NavLink>
             </li>
             <li>
-              <NavLink href={`${slash}about`} className="link modal-menu__link">
+              <NavLink href={`${slash}about`} className='link modal-menu__link'>
                 О компании
               </NavLink>
             </li>
             <li>
-              <a href={`#Contacts`} className="link modal-menu__link">
+              <a href={`#Contacts`} className='link modal-menu__link'>
                 Интернет-магазин
               </a>
             </li>
             <li>
-              <a href={`#Contacts`} className="link modal-menu__link">
+              <a href={`#Contacts`} className='link modal-menu__link'>
                 Контакты
               </a>
             </li>
           </ul>
-          <div className="modal-menu__phone">
+          <div className='modal-menu__phone'>
             {responseBranches.map(
-              (branch, index) =>
+              (branch) =>
                 branch.city === targetBranch && (
                   <a
                     href={`tel:+${branch.phone}`}
-                    key={index}
-                    className="link"
-                    target="_blank"
-                    rel="noreferrer"
+                    key={branch.id}
+                    className='link'
+                    target='_blank'
+                    rel='noreferrer'
                   >
                     +{branch.phone}
                   </a>
