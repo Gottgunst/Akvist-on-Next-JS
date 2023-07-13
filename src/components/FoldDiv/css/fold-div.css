@@ -14,4 +14,5 @@
 .fold-div:last-of-type {
   border-bottom: 1.5px solid var(--color__accent_green);
   padding-bottom: 20px;
+  margin-bottom: 80px;
 }
