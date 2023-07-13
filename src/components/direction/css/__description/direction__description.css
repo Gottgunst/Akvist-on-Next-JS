@@ -6,7 +6,7 @@
   font-weight: var(--font-weight__regular);
   color: var(--color__text_p); */
 
-  max-height: calc(100% - 166px);
+  /* max-height: calc(100% - 166px); */
   box-sizing: border-box;
 
   /* display: -webkit-box;
@@ -22,7 +22,7 @@
 @media screen and (max-width: 1079px) {
   .direction__description {
     margin-bottom: 42px;
-    max-height: calc(100% - 202px);
+    /* max-height: calc(100% - 202px); */
     -webkit-line-clamp: 5;
   }
 }

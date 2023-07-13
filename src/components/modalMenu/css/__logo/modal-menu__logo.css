@@ -1,7 +1,7 @@
 .modal-menu__logo {
 
   flex-shrink: 0;
-  background-image: url('../../../../../public/images/logos/Akvist_grey.svg');
+  background: url('../../../../../public/images/logos/Akvist_white.svg') center / cover no-repeat;
 }
 
 
