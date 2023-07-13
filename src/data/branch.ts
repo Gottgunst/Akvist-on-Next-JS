@@ -2,7 +2,7 @@ import { IBranch } from '../models';
 
 export const preBranch: IBranch[] = [
   {
-    id: 1,
+    id: 'branch-1',
     title: 'Вист-Ростов-на-Дону',
     address: 'Ростов-на-Дону, ул. Зорге, 70/1',
     address_second: '',
@@ -15,7 +15,7 @@ export const preBranch: IBranch[] = [
     city: 'Ростов-на-Дону',
   },
   {
-    id: 2,
+    id: 'branch-2',
     title: 'Вист-Краснодар',
     address: 'Краснодар, ул. Стасова, 182/1, Офис №310',
     address_second:
@@ -29,7 +29,7 @@ export const preBranch: IBranch[] = [
     city: 'Краснодар',
   },
   {
-    id: 3,
+    id: 'branch-3',
     title: 'Вист-Ставрополь',
     address: 'Ставрополь, 2-я Промышленная улица, 16, офис 6',
     address_second: '',
@@ -42,7 +42,7 @@ export const preBranch: IBranch[] = [
     city: 'Ставрополь',
   },
   {
-    id: 4,
+    id: 'branch-4',
     title: 'Вист-Пятигорск',
     address: 'Пятигорск, ул. Ермолова, 30',
     address_second: '',
